@@ -1,0 +1,106 @@
+<script>
+  const questionNums = {
+    quizOne: 1,
+    quizTwo: 2,
+    quizThree: 3,
+    quizFour: 4,
+  };
+
+  function animateScroll(ele, frame, amount){
+    const step = 20;
+    if (frame < amount) {
+        const newFrame = frame + step;
+        ele.style.left = `-${newFrame}px`;
+        window.requestAnimationFrame(function(){
+            animateScroll(ele, newFrame, amount);
+        });
+    } else {
+      ele.style.left = `-${amount}px`;
+    }
+  }
+
+  function scrollToQuestion(questionNum) {
+    const ele = document.querySelector('.decipher-quiz-container');
+    const questionWidth = document.querySelector('.decipher-quiz-question').offsetWidth;
+    const newLeft = questionWidth * questionNum;
+    const currentLeft = newLeft - questionWidth;
+    ele.style.position = 'relative';
+    animateScroll(ele, currentLeft, newLeft);
+  }
+
+  function quizAnswer(question, answer) {
+    sessionStorage.setItem(question, answer);
+    if (question == 'quizFour') {
+      window.location.href = 'https://deciphercounselling.com/therapist-finder-results';
+    } else {
+      scrollToQuestion(questionNums[question]);
+    }
+  }
+</script>
+
+<style>
+  .decipher-quiz-container {
+    display: flex;
+    overflow: visible;
+  }
+
+  .decipher-quiz-container > * {
+    flex: 0 0 100%;
+  }
+
+  .decipher-quiz-question {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 36px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .decipher-quiz-question > * {
+    flex: 1;
+    padding: 0 16px;
+  }
+</style>
+
+<div class="decipher-quiz-container">
+  <div class="decipher-quiz-question">
+    <h2>What counselling session type are you looking for?</h2>
+    <div>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizOne', 'a');">Adult(s)</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizOne', 'b');">Child (under 12)</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizOne', 'c');">Adolescent (12-18)</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizOne', 'd');">Relationship/Family</button>
+    </div>
+  </div>
+  <div class="decipher-quiz-question">
+    <h2>What is your availability preference?</h2>
+    <div>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizTwo', 'a');">Therapists taking on new clients</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizTwo', 'b');">Weekends only</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizTwo', 'c');">Weekdays only</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizTwo', 'd');">Evenings only</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizTwo', 'e');">I'm flexible</button>
+    </div>
+  </div>
+  <div class="decipher-quiz-question">
+    <h2>Are you needing any specialized offerings our therapist team offers?</h2>
+    <div>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'a');">BIPoC folks</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'b');">QTBIPoC and marginalized folks</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'c');">Food/Body Image issues</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'd');">EMDR/Brainspotting</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'e');">None of the above</button>
+    </div>
+  </div>
+  <div class="decipher-quiz-question">
+    <h2>What language would you like the counselling session to be in?</h2>
+    <div>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'a');">English</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'b');">Mandarin</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'c');">Cantonese</button>
+    </div>
+  </div>
+</div>

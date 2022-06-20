@@ -1,0 +1,262 @@
+<script>
+  const allTherapists = ["LL", "SN", "XW", "NR"];
+
+  const outcomeTitleWording = {
+    quizOne: {
+      a: 'adults',
+      b: 'children',
+      c: 'adolescents',
+      d: 'relationships/families'
+    },
+    quizTwo: {
+      a: 'currently taking on new clients',
+      b: 'available on weekends',
+      c: 'available on weekdays',
+      d: 'available evenings',
+    },
+    quizThree: {
+      a: 'the BIPoC community',
+      b: 'the QTBIPoC/marginalized community',
+      c: 'Food/Body Image issues',
+      d: 'EMDR/Brainspotting'
+    },
+    // NOTE: The way the phrase is constructed,
+    // the language question must always be the last,
+    // even if additional questions are added
+    quizFour: {
+      a: 'English',
+      b: 'Mandarin',
+      c: 'Cantonese'
+    }
+  };
+
+  const outcomeKey = {
+    // What counselling session type are you looking for?
+    quizOne: {
+      // Adults
+      a: ["LL", "SN", "XW", "NR"],
+      // Child
+      b: ["SN"],
+      // Adolescent
+      c: ["LL", "SN", "XW", "NR"],
+      // Relationship/Family
+      d: ["SN", "XW"]
+    },
+    // When are you free?
+    quizTwo: {
+      // Only taking on new clients
+      a: ["SN", "NR"],
+      // Weekends
+      b: ["SN", "XW"],
+      // Weekdays
+      c: ["LL", "SN", "XW", "NR"],
+      // Evenings
+      d: ["LL", "SN", "NR"],
+      // N/A
+      e: allTherapists
+    },
+    // Are you needing any specialized offerings our therapist team offers?
+    quizThree: {
+      // BIPOC
+      a: ["LL", "SN", "XW", "NR"],
+      // QTBIPoC community and marginalized folks
+      b: ["XW", "NR"],
+      // Food/Body Image
+      c: ["LL"],
+      // EMDR/Brainspotting
+      d: ["LL", "SN", "NR"],
+      // N/A
+      e: allTherapists
+    },
+    // Language
+    quizFour: {
+      // English
+      a: ["LL", "SN", "XW", "NR"],
+      // Mandarin
+      b: ["LL", "SN", "XW"],
+      // Cantonese
+      c: ["SN"]
+    }
+  };
+
+  function modeString(array) {
+    if (array.length == 0) return null;
+    var modeMap = {};
+    var maxEl = array[0];
+    var maxCount = 1;
+
+    for (var i = 0; i < array.length; i++) {
+      var el = array[i];
+
+      if (modeMap[el] == null) modeMap[el] = 1;
+      else modeMap[el]++;
+
+      if (modeMap[el] > maxCount) {
+        maxEl = el;
+        maxCount = modeMap[el];
+      } else if (modeMap[el] == maxCount) {
+        maxEl += "&" + el;
+        maxCount = modeMap[el];
+      }
+    }
+    return maxEl;
+  }
+
+  function makeEleVisible(ele, visible) {
+    if (visible) {
+      ele.classList.remove('decipher-quiz-result-hide');
+    } else {
+      ele.classList.add('decipher-quiz-result-hide');
+    }
+  }
+
+  function wrapTitleWording(wording) {
+    return `<b class='decipher-quiz-result-title-variable'>${wording}</b>`;
+  }
+
+  function injectOutcomeTitleWording(answers) {
+    // If a wording is undefined, it means that they chose a N/A answer
+    // and we can skip including that in the final phrase.
+    const wordingOne = outcomeTitleWording.quizOne[answers.quizOne];
+    const wordingTwo = outcomeTitleWording.quizTwo[answers.quizTwo];
+    const wordingThree = outcomeTitleWording.quizThree[answers.quizThree];
+    const wordingFour = outcomeTitleWording.quizFour[answers.quizFour];
+    let phrase = 'Here are the therapists that work well with ' +
+      `${wrapTitleWording(wordingOne)}`;
+
+    // i.e. "are [available on weekends/etc...]"
+    if (wordingTwo) {
+      phrase = phrase + `, are ${wrapTitleWording(wordingTwo)}`;
+    }
+
+    // i.e "specialize in [the BIPoC community/etc...]"
+    if (wordingThree) {
+      phrase = phrase + `, specialize in ${wrapTitleWording(wordingThree)}`;
+    }
+
+    // i.e. "and consult in [English/etc...]"
+    phrase = phrase + ` and consult in ${wrapTitleWording(wordingFour)}`;
+
+    const ele = document.querySelector('.decipher-quiz-result-title-wording');
+    ele.innerHTML = phrase;
+  }
+
+  function processOutcome() {
+    const answers = {
+      quizOne: sessionStorage.getItem('quizOne'),
+      quizTwo: sessionStorage.getItem('quizTwo'),
+      quizThree: sessionStorage.getItem('quizThree'),
+      quizFour: sessionStorage.getItem('quizFour')
+    };
+
+    const tallyList = Object.keys(answers)
+      // For each quiz question param, append the therapists
+      // that matched the user's choice to a tally list
+      .reduce(function(accum, quizQuestion) {
+        const availChoices = Object.keys(outcomeKey[quizQuestion]);
+        const userChoice = answers[quizQuestion];
+        if (availChoices.includes(userChoice)) {
+          const outcome = outcomeKey[quizQuestion][userChoice];
+          return accum.concat(outcome);
+        }
+
+        return accum;
+      }, []);
+      const matches = modeString(tallyList).split("&");
+
+      injectOutcomeTitleWording(answers);
+
+      makeEleVisible(document.querySelector('.decipher-quiz-result-spinner'), false);
+      makeEleVisible(document.querySelector('.decipher-quiz-result-title'), true);
+      makeEleVisible(document.querySelector('.decipher-quiz-result-profiles'), true);
+
+      matches.forEach(function(match) {
+        makeEleVisible(document.querySelector(`.decipher-quiz-result-profile-${match}`), true);
+      });
+
+  }
+
+  document.addEventListener('readystatechange', function(event) {
+    if (event.target.readyState === "complete") {
+      processOutcome();
+    }
+});
+</script>
+
+<style>
+  .decipher-quiz-result-hide {
+    display: none;
+  }
+
+  .decipher-quiz-result-profiles {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .decipher-quiz-result-profile {
+    padding: 8px;
+  }
+
+  .decipher-quiz-result-profile > a > img {
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
+    object-fit: cover;
+  }
+
+  .decipher-quiz-result-profile > a > p {
+    font-size: 24px !important;
+    padding: 8px;
+  }
+
+  .decipher-quiz-result-title {
+    margin-bottom: 64px;
+  }
+
+  .decipher-quiz-result-title-variable {
+    text-decoration: underline;
+  }
+
+  .decipher-quiz-result-title > p {
+    font-size: 12px;
+  }
+
+  .decipher-quiz-result-therapist-directory-link {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
+
+<div>
+  <h3 class="decipher-quiz-result-spinner">Processing your results now...</h3>
+  <div class="decipher-quiz-result-title decipher-quiz-result-hide">
+    <h3 class='decipher-quiz-result-title-wording'></h3>
+    <p>To see all therapists, <a class="decipher-quiz-result-therapist-directory-link" href="https://deciphercounselling.com/therapist-directory">visit our therapist directory</a></p>
+  </div>
+  <div class="decipher-quiz-result-profiles decipher-quiz-result-hide">
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-LL decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/linda-lin">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/26d1040c-7f8b-4ee3-a2d0-98a38d8eeab7/Decipher-Edited-6.jpg" />
+        <p>Linda Lin</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-SN decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/stephanie-ng">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/7f09a2f9-c6ca-4fd5-abea-27524361fc5a/decipher-counselling-stephanie-ng.jpg" />
+        <p>Stephanie Ng</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-XW decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/xu-wang">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/969497ec-2a8e-40d4-a573-c2486cb112e5/Professional+Photo1.jpg" />
+        <p>Xu Wang</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-NR decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/natasha-roop">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/1655442133021-0DAT74UZBA1NIZHVWE2U/Decipher-Edited-24.jpg" />
+        <p>Natasha Roop</p>
+      </a>
+    </div>
+  </div>
+</div

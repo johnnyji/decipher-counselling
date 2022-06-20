@@ -1,0 +1,2564 @@
+// Hide Overflow
+#collection-5e7d33d715eff3354c6e4fba,
+#collection-620bfa0d3a26e25e550ab122,
+#collection-620bf99b1b9153743e730a71,
+#collection-620bf9ad3038235081e2640d,
+#collection-620bf9a43038235081e263a2,
+footer{
+  overflow-x: hidden !important;
+}
+
+.collection-62129412dbe1134a708006cd{
+  .Main--blog-item{
+    overflow-x: hidden !important;
+  }
+}
+
+//STICKY-- MAKE INDEX FLEXIBLE
+@media (min-width:960px) {
+  .Index {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+
+  .Index-page {
+    width: 100%;
+  }
+
+  .Index-gallery {
+    width: 100%;
+  }
+
+
+  #contact-sticky{
+    width: 30% !important;
+    padding: 0px 0px;
+    overflow:inherit;
+    box-sizing:border-box;
+  }
+
+
+
+  #contact-hero{
+    width: 70% !important;
+    padding: 0px 0px;
+    margin-top:0px;
+    margin-bottom:0px !important;
+    box-sizing:border-box;
+  }
+
+  #faq-hero-left,
+  #faq-second-left{
+    width: 50% !important;
+    padding: 0px 0px;
+    overflow:inherit;
+    box-sizing:border-box;
+  }
+
+
+
+  #faq-hero-right,
+  #faq-second-right{
+    width: 50% !important;
+    padding: 0px 0px;
+    margin-top:0px;
+    margin-bottom:0px !important;
+    box-sizing:border-box;
+  }
+}
+
+
+//Padding around sticky sections
+@media screen and (min-width:960px) {
+  #contact-hero{
+    .Index-page-content {
+      padding-left:5vw;
+      padding-right:2.5vw;
+    }
+  }
+
+  #contact-sticky{
+    .Index-page-content {
+      padding-left:5vw;
+      padding-right:5vw;
+    }
+  }
+}
+
+//Make Sticky
+@media screen and (min-width:960px) {
+
+  #contact-sticky,
+  #faq-hero-left,
+  #faq-second-left{
+    .Index-page-content {
+      position: relative;
+      position: sticky !important;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
+      top: 10vh; //change as necessary
+      min-height:90vh; //change as necessary
+    }
+  }
+
+}
+
+/**GLOBAL COLORS**/
+
+@white: #FFFFFF;
+@black: #293036;
+@green: #E4EAA6;
+@lightblue: #EFF3F4;
+@purple: #F0E6EB;
+@yellow: #FCF9DA;
+@pink: #F7D4C0;
+@blue: #E0EDFD;
+@orange: #FFBF41;
+
+
+/**BREAKPOINTS**/
+
+@maxBP: 1649px;
+@deskBP: 768px;
+@mBP: 767px;
+
+
+
+/**OTHER VARIABLES**/
+
+@mobile:~"only screen and (max-width: 767px)";
+@desktop:~"only screen and (min-width: 768px)";
+@tablet: ~"only screen and (max-width: 1024px) and (min-width:768px)";
+@desktopXL: ~"only screen and (min-width: 1649px)";
+
+
+
+//Vertically Center Content
+@media(min-width: 601px){
+  #about-second-section,
+  #investment-hero,
+  #hero,
+  #home-fourth{
+    .sqs-row{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+//Vertically Center Content
+@media(min-width: 601px){
+  .collection-62129412dbe1134a708006cd{
+    .Main--blog-item{
+      .sqs-row:first-child{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+
+//Reverse Order on Mobile
+@media screen and (max-width:640px) {
+  #about-second-section,
+  #home-fourth{
+    .sqs-row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+
+//Reverse Order on Mobile
+@media screen and (max-width:640px) {
+  .collection-62129412dbe1134a708006cd{
+    .Main--blog-item{
+      .sqs-row{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+/* Hyphens */
+h1, h2, h3, a, p {
+  -webkit-hyphens: manual !important;
+  -moz-hyphens: manual !important;
+  -ms-hyphens: manual !important;
+  hyphens: manual !important;
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    word-wrap: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
+}
+
+
+//Fonts
+
+@font-face {
+  font-family: 'Arbeit-Regular';
+  src: url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/61540d2c50ddb209975d62af/1632898348865/Arbeit-Regular.woff2') format('woff2'),
+  url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/61540d212fdcac4f63f65745/1632898338052/Arbeit-Regular.woff') format('woff'),
+  url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/615397814855eb71ad21cca4/1632868225766/Arbeit-Regular+copy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Arbeit-Light';
+  src: url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/615397783d0cea7fb3fc0f66/1632868216518/Arbeit-Light+copy.otf.woff2') format('woff2'),
+  url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/61540d5477bb72484f6a69bd/1632898388292/Arbeit-Light.woff') format('woff'),
+  url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/61540d61db415f639a8a1f42/1632898401465/Arbeit-Light.otf') format('opentype');
+}
+
+a:hover{
+  opacity: 0.3 !important;
+}
+a{
+  transition: all 0.5s ease !important;
+}
+
+body{
+  p{
+    font-size: 16px !important;
+  }
+}
+
+h1{
+  font-size: 5.5rem !important;
+}
+
+h2{
+  font-size: 3.25rem !important;
+}
+
+h3,
+.sqs-block-image .design-layout-poster .image-title p{
+  font-size: 1.75rem !important;
+}
+
+
+
+h1, h2, h3,
+.sqs-block-image .design-layout-overlap .image-title p{
+  font-family: 'Arbeit-Light' !important;
+  font-weight: 400 !important;
+}
+
+.sqs-block-image .design-layout-overlap .image-title p{
+  font-size: 1.75rem !important;
+  line-height: 1.3em !important;
+}
+
+p,
+.caption-text,
+.sqs-block-form .field-list .title,
+.form-wrapper .field-list .field .field-element,
+.Header-nav-item,
+.Header-menu-nav-item,
+.Mobile-overlay-nav-item,
+.Mobile-overlay-folder-item,
+.sqs-block-image .image-block-outer-wrapper.design-layout-overlap .image-button a,
+.description,
+.form-wrapper .field-list .field select,
+.form-wrapper .field-list .field .option,
+.form-submission-text{
+  font-family: 'Arbeit-Light' !important;
+}
+
+.summary-title a,
+.sqs-block-image .design-layout-poster .image-title p{
+  font-family: 'Arbeit-Light' !important;
+}
+
+p strong{
+  font-family: 'Arbeit-Regular' !important;
+  font-weight: 700 !important;
+}
+
+@media @tablet{
+  h1{
+    font-size: 3.75rem !important;
+  }
+  h2{
+    font-size: 2rem !important;
+  }
+  h3,
+  .sqs-block-image .design-layout-overlap .image-title p{
+    font-size: 1.5rem !important;
+  }
+}
+
+@media @mobile{
+  h1{
+    font-size: 3.75rem !important;
+  }
+  h2{
+    font-size: 2rem !important;
+  }
+  h3,
+  .sqs-block-image .design-layout-overlap .image-title p{
+    font-size: 1.5rem !important;
+  }
+}
+
+
+//Button Styling
+.decipher-quiz-button,
+.sqs-block-button-element,
+.sqs-block-button-element--medium,
+.sqs-block-image .image-block-outer-wrapper.design-layout-overlap .image-button a,
+.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item{
+  font-family: 'Arbeit-Regular' !important;
+  position: relative !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  background-color: @black !important;
+  color: @white !important;
+  background-color: #D1A16C;
+  border: 1px solid @black !important;
+  transition: all 0.5s ease !important;
+  cursor: pointer;
+}
+
+.decipher-quiz-button {
+  margin-bottom: 24px;
+  padding: 16px;
+  width: 100%;
+}
+
+.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item{
+  font-family: 'Arbeit-Light' !important;
+  margin-top: 5vh !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.decipher-quiz-button::after,
+.sqs-block-button-element::after,
+.sqs-block-button-element--medium::after,
+.sqs-block-image .image-block-outer-wrapper.design-layout-overlap .image-button a::after,
+.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item::after{
+  content: '' !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  left: -10px !important;
+  bottom: -10px !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(255,255,255,0) !important;
+  border: 1px solid black !important;
+}
+
+
+.sqs-editable-button{
+  border: 1px solid @black !important;
+}
+
+.decipher-quiz-button:hover,
+.sqs-block-button-element:hover,
+.sqs-editable-button:hover,
+.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:hover,
+.sqs-block-image .image-block-outer-wrapper.design-layout-overlap .image-button a:hover{
+  cursor: pointer !important;
+  opacity: 1 !important;
+  color: @black !important;
+  background-color: @green !important;
+  background-color: #E0EDFD;
+}
+
+//Footer
+footer{
+  border-top: 1px solid @black !important;
+}
+
+
+//Contact Form
+.form-wrapper .field-list .field .field-element{
+  background-color: rgba(255,255,255,0) !important;
+  border: none !important;
+  border-bottom: 1px solid @black !important;
+}
+
+#block-4e8a3cbc5deaa76e2dc0{
+  .sqs-block-form input,
+  .sqs-editable-button{
+    font-family: 'Arbeit-Regular' !important;
+    position: relative !important;
+    box-shadow: -5px 5px white,
+    -5px 5px 0px 1px @black;
+    z-index: 1 !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    background-color: @black !important;
+    color: @white !important;
+    border: 1px solid @black !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .sqs-block-form input:hover,
+  .sqs-editable-button:hover{
+    cursor: pointer !important;
+    opacity: 1 !important;
+    color: @black !important;
+    background-color: @green !important;
+  }
+}
+
+
+//Newsletter Form
+.sqs-block-newsletter .newsletter-form-field-element{
+  border: none !important;
+  background-color: rgba(255,255,255,0) !important;
+  border-bottom: 1px solid @black !important;
+}
+
+
+.newsletter-form-fields-wrapper{
+  border: none !important;
+}
+
+
+.newsletter-form-field-wrapper{
+  border: none !important;
+}
+
+
+input[type="text"]::placeholder {
+  color: @black !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  font-family: 'Arbeit-Light' !important;
+}
+
+input[type="text"] {
+  color: @black !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  font-family: 'Arbeit-Light' !important;
+}
+
+.newsletter-block .newsletter-form-field-element:focus, .newsletter-block .newsletter-form-field-element:hover {
+  background: transparent !important;
+  outline: none
+}
+
+.sqs-block .newsletter-block{
+  padding: 0 !important;
+}
+
+@media @mobile{
+  .newsletter-block .newsletter-form-wrapper--alignLeft .newsletter-form{
+    text-align: center !important;
+    input[type="text"]{
+      text-align: center !important;
+    }
+  }
+}
+
+#block-yui_3_17_2_1_1644961618474_2586{
+  .newsletter-form-button{
+    margin-left: 2vw !important;
+    font-family: 'Arbeit-Regular' !important;
+    box-shadow: -5px 5px @green,
+    -5px 5px 0px 1px @black;
+    position: relative !important;
+    z-index: 10 !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    background-color: @black !important;
+    color: @white !important;
+    transition: all 0.5s ease !important;
+  }
+
+
+
+
+  .newsletter-form-button:hover{
+    cursor: pointer !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
+    border: 1px solid @black !important;
+    color: @black !important;
+    background-color: @green !important;
+  }
+}
+
+//Mobile Nav
+@media @mobile{
+  .Mobile-overlay-nav-item:last-child{
+    display: none;
+  }
+}
+
+.Mobile-overlay-close{
+  position: absolute !important;
+  z-index: 9999 !important;
+}
+.Mobile-overlay-menu{
+  width: 100% !important;
+}
+.Mobile-overlay-menu-main{
+  padding: 0 !important;
+  position: relative !important;
+  top: 60% !important;
+  left: 50% !important;
+  height: 100% !important;
+  transform: translate(-50%, -50%) !important;
+  .Mobile-overlay-nav-item{
+    text-align: center !important;
+  }
+}
+
+.Mobile-bar.Mobile-bar--top {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid @black !important;
+}
+
+//Bump body content down on mobile
+@media @mobile{
+  .Index-page-content{
+    padding-top: 15vh !important;
+  }
+}
+
+@media @tablet{
+  .Index-page-content{
+    padding-top: 15vh !important;
+  }
+}
+
+//Navigation
+@media @desktop{
+  .Header-inner{
+    border-bottom: 1px solid @black !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+  .Header-branding{
+    width: 33vw !important;
+    position: relative !important;
+  }
+
+  .Header-branding-logo{
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translate(-50%, 0%) !important;
+    @media(min-width:1600px){
+      transform: translate(-50%, 20%) !important;
+    }
+  }
+
+  .Header-nav{
+    padding: 0 !important;
+    margin-bottom: 1.25vh !important;
+    margin-top: 1.25vh !important;
+    width: 75vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .Header-nav-inner{
+    margin-left: 2.5vw !important;
+    border-left: 1px solid @black !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+
+  .Header-nav-item{
+    margin: 0 !important;
+    width: 42% !important;
+    text-align: left !important;
+    padding-top: 1.5vh !important;
+    padding-bottom: 1.5vh !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid @black;
+  }
+
+  .Header-nav-item:nth-child(odd){
+    padding-left: 5vw !important;
+  }
+  .Header-nav-item:nth-child(even){
+    border-left: 1px solid @black !important;
+    padding-left: 5vw !important;
+  }
+
+  .Header-nav-item:last-child{
+    border-bottom: none;
+  }
+
+  .Header-nav-item:nth-child(9){
+    border-bottom: none;
+  }
+
+  .Header-nav-item:hover{
+    opacity: 1 !important;
+    background-color: @green !important;
+  }
+}
+
+//Book Now Button
+@media @mobile{
+  .book-now{
+    display: none !important;
+  }
+}
+
+@media @tablet{
+  .book-now{
+    display: none !important;
+  }
+}
+@media @desktop{
+  .book-now{
+    opacity: 0 !important;
+    position: fixed !important;
+    z-index: 99999999 !important;
+    box-shadow: -5px 5px white,
+    -5px 5px 0px 1px @black;
+    font-family: 'Arbeit-Regular' !important;
+    top: 5vh !important;
+    right: 1vw !important;
+    background-color: @black !important;
+    color: @white !important;
+    height: 5vh !important;
+    cursor: pointer !important;
+    transition: all 0.5s ease !important;
+    border: 1px solid @black !important;
+    width: 250px !important;
+    @media(max-width:1026px){
+      height: 10vh !important;
+    }
+  }
+
+  .book-now:hover{
+    background-color: @green !important;
+    a{
+      color: @black !important;
+      opacity: 1 !important;
+    }
+  }
+
+  .book-now-text{
+    position: relative !important;
+    width: 250px !important;
+  }
+
+  .book-now-text a{
+    position: absolute !important;
+    top: 50% !important;
+    left: 25% !important;
+    transform: translate(-10%, 10%);
+    @media(max-width:1026px){
+      transform: translate(-10%, 40%);
+    }
+    @media(min-width:1600px){
+      transform: translate(-10%, 40%);
+    }
+  }
+
+  .scrolled .book-now{
+    opacity: 1 !important;
+  }
+}
+
+
+//Lightbox
+html .c-lightbox {
+  transition-duration: 100ms;
+}
+
+html .c-lightbox.is-loading::before {
+  border: 2px solid rgba(239,243,244,.7);
+  border-top-color: rgba(239,243,244,.15);
+  border-left-color: rgba(239,243,244,.15);
+}
+
+html .c-lightbox__dialog {
+  transition: background-color 100ms;
+}
+
+html .c-lightbox__dialog.is-open {
+  background-color: rgba(239,243,244,.6)
+}
+
+html .c-lightbox__content {
+  padding: 60px;
+}
+
+html .c-lightbox:not(.is-loading) .c-lightbox__dialog.is-open .c-lightbox__content {
+  -webkit-animation: lightboxOpen 100ms forwards;
+  animation: lightboxOpen 100ms forwards;
+}
+
+html .c-lightbox__dialog.is-close .c-lightbox__content {
+  -webkit-animation: lightboxClose 100ms forwards;
+  animation: lightboxClose 100ms forwards;
+}
+
+html .c-lightbox__close {
+  margin: 21px;
+  width: 40px;
+  height: 40px;
+}
+
+.c-lightbox__content{
+  border: 1px solid @black !important;
+}
+
+
+//Accordian Styling
+
+//styles of accordion heading
+.sqs-block-markdown .sqs-block-content {
+  font-size:1rem;
+  cursor:pointer;
+  border-bottom:1px solid #000;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  padding-bottom: 5vh !important;
+  font-weight:500;
+}
+
+//add a dropdown indicator (initial)
+.sqs-block-markdown .sqs-block-content:before {
+  content: "+";
+  float: right;
+  font-size: 120%;
+  line-height: 120%;
+  color: #222;
+  font-weight: 100;
+}
+
+//active dropdown indicator
+.activedrop .sqs-block-content:before {
+  content: "-" !important;
+  float: right;
+  font-size: 150%;
+  line-height: 120%;
+  color: #222;
+  font-weight: 100;
+}
+
+
+
+//Filter for Therapists
+@media screen and (min-width: 701px) {
+
+  .custom-filter-position-left .custom-filter-grid, .custom-filter-position-right .custom-filter-grid {
+    padding-left:50px !important;
+  }
+  body .custom-filter-container.ProductList, body .custom-filter-parent-node {
+    overflow: visible;
+    position: relative;
+  }
+  .customFiltersWrapper {
+    position: sticky !important;
+    top: 1%;
+    min-height: 98vh;
+    overflow-y: visible;
+  }
+}
+
+.custom-filter-container.custom-filter-view-dropdowns.lite-dropdowns .customFiltersWrapper .archive-block-wrapper {
+  background: rgba(255,255,255,0) !important;
+  padding:3% !important;
+}
+
+.custom-filter-container.custom-filter-view-dropdowns.lite-dropdowns .customFiltersWrapper .archive-block-wrapper .archive-group-list {
+  background: rgba(255,255,255,0) !important;
+}
+
+.custom-filter-container.custom-filter-view-dropdowns.lite-dropdowns .customFiltersWrapper .sqs-block .search-wrap .search-input {
+  background: rgba(255,255,255,0) !important;
+
+}
+
+
+
+
+
+
+//Pages
+
+//Contact Page
+
+#contact-mobile{
+  display: none !important;
+}
+
+@media @mobile{
+  #contact-mobile{
+    display: block !important;
+  }
+  #contact-sticky{
+    display: none !important;
+  }
+}
+
+
+
+#contact-sticky,
+#contact-mobile{
+  .sqs-col-12{
+    background-color: @blue !important;
+    border: 1px solid @black !important;
+  }
+  #block-yui_3_17_2_1_1644976466186_2710,
+  #block-3eca8892b7731521165f{
+    padding: 0 !important;
+    border-top: 1px solid @black !important;
+  }
+  #block-yui_3_17_2_1_1644976466186_1910,
+  #block-4ceed772f1c68439ee53{
+    border-bottom: 1px solid @black !important;
+    padding-bottom: 0 !important;
+  }
+  #block-yui_3_17_2_1_1644976466186_2282,
+  #block-38fd5d849925804c94dc{
+    display: none !important;
+  }
+}
+
+@media @mobile{
+  #contact-mobile{
+    .sqs-col-12{
+      margin-left: 5vw !important;
+      margin-right: 5vw !important;
+    }
+  }
+  #contact-hero{
+    .Index-page-content {
+      padding-top: 0 !important;
+    }
+  }
+}
+@media @tablet{
+  #contact-mobile{
+    display: block !important;
+  }
+  #contact-sticky{
+    display: none !important;
+  }
+}
+
+@media @tablet{
+  #contact-mobile{
+    .sqs-col-12{
+      width: 50vw !important;
+      position: relative !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+  }
+  #contact-hero{
+    .Index-page-content {
+      padding-top: 0 !important;
+    }
+  }
+}
+
+
+//About page
+//Swap decipher text on mobile
+#block-620d81fc37f82b076814233a p{
+  display: none !important;
+}
+@media @mobile{
+  #block-620d81fc37f82b076814233a p{
+    display: block !important;
+  }
+  #block-yui_3_17_2_1_1645052426380_5498{
+    display: none !important;
+  }
+}
+
+//About Second section
+#about-second-section{
+  background-color: @yellow !important;
+}
+
+
+
+//About CTA, Investment CTA
+#about-cta,
+#investment-cta,
+#approach-cta{
+  border-top: 1px solid @black !important;
+  .Index-page-content,
+  #block-yui_3_17_2_1_1645057832264_1990,
+  #block-yui_3_17_2_1_1645057832264_2886,
+  #block-2fd632f8f3b4ccb5d53f,
+  #block-e94645e68695f393c35a,
+  #block-f19e5bb71debac532a85,
+  #block-597640dde4dfed464540{
+    padding: 0 !important;
+  }
+
+}
+
+#block-yui_3_17_2_1_1645057832264_1990,
+#block-yui_3_17_2_1_1645057832264_2886,
+#block-2fd632f8f3b4ccb5d53f,
+#block-e94645e68695f393c35a,
+#block-f19e5bb71debac532a85,
+#block-597640dde4dfed464540{
+  cursor: pointer !important;
+  @media @desktop{
+    img{
+      transform: translateY(-10%) !important;
+      opacity: 0 !important;
+      transition: all 0.5s ease !important;
+    }
+  }
+  @media @mobile{
+    img{
+      opacity: 0.5 !important;
+      transition: all 0.5s ease !important;
+    }
+  }
+  @media @tablet{
+    img{
+      opacity: 0.5 !important;
+      transition: all 0.5s ease !important;
+    }
+  }
+
+  position: relative !important;
+  height: 40vh !important;
+  .image-title-wrapper{
+    position: absolute !important;
+    top: 30% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    @media @mobile{
+      top: 50% !important;
+    }
+    @media @tablet{
+      top: 50% !important;
+    }
+  }
+  .image-title-wrapper p{
+    color: @black !important;
+    border-bottom: 1px solid @black !important;
+  }
+}
+
+
+@media @mobile{
+  #block-yui_3_17_2_1_1645057832264_2886,
+  #block-e94645e68695f393c35a,
+  #block-597640dde4dfed464540{
+    border-top: 1px solid @black !important;
+  }
+  #block-yui_3_17_2_1_1645057832264_1990,
+  #block-yui_3_17_2_1_1645057832264_2886,
+  #block-2fd632f8f3b4ccb5d53f,
+  #block-e94645e68695f393c35a,
+  #block-f19e5bb71debac532a85,
+  #block-597640dde4dfed464540{
+    height: auto !important;
+  }
+}
+
+
+@media @desktop{
+  #block-yui_3_17_2_1_1645057832264_2886,
+  #block-e94645e68695f393c35a,
+  #block-597640dde4dfed464540{
+    border-left: 1px solid @black !important;
+  }
+  #block-yui_3_17_2_1_1645057832264_1990:hover,
+  #block-yui_3_17_2_1_1645057832264_2886:hover,
+  #block-2fd632f8f3b4ccb5d53f:hover,
+  #block-f19e5bb71debac532a85:hover
+  {
+    img{
+      opacity: 0.3 !important;
+    }
+  }
+  #block-e94645e68695f393c35a:hover,
+  #block-597640dde4dfed464540:hover
+  {
+    img{
+      opacity: 0.8 !important;
+    }
+  }
+}
+
+
+
+//FAQ styling
+#faq-hero-left{
+  border-bottom: 1px solid @black !important;
+}
+#faq-second-left,
+#faq-mobile-1{
+  border-bottom: 1px solid @black !important;
+  background-image: url("https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/62108ba257d11c26f184062d/1645251492387/decipher-faq.jpg");
+  background-color: @blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#faq-hero-right{
+  background-color: @pink !important;
+  .Index-page-content{
+    @media @desktop{
+      border-left: 1px solid @black !important;
+    }
+    @media @tablet{
+      border-left: 0px solid @black !important;
+    }
+    border-bottom: 1px solid @black !important;
+  }
+}
+#faq-second-right,
+#faq-mobile-2{
+  .Index-page-content{
+    @media @desktop{
+      border-left: 1px solid @black !important;
+    }
+    @media @tablet{
+      border-left: 0px solid @black !important;
+    }
+    border-bottom: 1px solid @black !important;
+  }
+}
+
+#faq-mobile-1,
+#faq-mobile-2{
+  display: none !important;
+}
+
+@media @mobile{
+  #faq-mobile-1,
+  #faq-mobile-2{
+    display: block !important;
+  }
+  #faq-second-right,
+  #faq-second-left{
+    display: none !important;
+  }
+}
+
+//faq marquee
+#faq-marquee{
+  .Index-page-content{
+    padding: 0 !important;
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+  }
+  border-bottom: 1px solid @black !important;
+}
+
+
+//faq vertical accordian
+#faq-vertical-tabs{
+  .Index-page-content{
+    padding: 0 !important;
+  }
+}
+.c-vertical-tabs__tab {
+  font-family:'Arbeit Light' !important;
+  font-size:1rem !important;
+  letter-spacing:0em;
+  border-right: 1px solid @black !important;
+  @media @mobile{
+    border-bottom: 1px solid @black !important;
+    border-right: 0px solid @black !important;
+  }
+}
+
+.c-vertical-tabs__content {
+  padding-left: 5vw !important;
+  padding-right: 5vw !important;
+  padding-top: 10vh !important;
+  padding-bottom: 10vh !important;
+  margin-bottom: 10vh !important;
+  @media @mobile{
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+    margin-bottom: 0vh !important;
+  }
+}
+
+
+.c-vertical-tabs, .c-vertical-tabs__inner{
+  height: 70vh !important;
+  @media @mobile{
+    height: auto !important;
+  }
+}
+
+
+@media @desktop{
+  .c-vertical-tabs__tab:before{
+    display: none !important;
+  }
+}
+
+
+
+
+//Investment Page
+
+#investment-hero{
+  background-color: @lightblue !important;
+  border-bottom: 1px solid @black !important;
+  #block-yui_3_17_2_1_1645282373543_4812,
+  #block-yui_3_17_2_1_1645282373543_7687,
+  #block-yui_3_17_2_1_1645282373543_8167{
+    display: none !important;
+    @media @mobile{
+      display: none !important;
+    }
+  }
+  h2 strong{
+    font-size: 1.8rem !important;
+    font-weight: 400 !important;
+    @media @mobile{
+      display: none !important;
+    }
+    @media @tablet{
+      font-size: 0.8rem !important;
+    }
+  }
+  h2{
+    margin-bottom: 0 !important;
+    @media @mobile{
+      margin-top: 0 !important;
+    }
+  }
+  h3{
+    margin-top: 0 !important;
+  }
+  .sqs-block-horizontalrule{
+    padding: 0 !important;
+    @media @mobile{
+      display: none !important;
+    }
+  }
+  .sqs-block-html{
+    p{
+      display: none !important;
+      @media @mobile{
+        display: block !important;
+      }
+    }
+    margin-top: 2vh !important;
+    margin-bottom: 2vh !important;
+    @media @mobile{
+      margin-top: 0vh !important;
+      margin-bottom: 0vh !important;
+    }
+  }
+}
+
+
+//Investment Marquee
+#investment-marquee{
+  .Index-page-content{
+    padding: 0 !important;
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+  }
+  border-bottom: 1px solid @black !important;
+}
+
+
+//Investment Summary Desktop
+#investment-summary{
+  #block-621104227788cf4f5c8892df,
+  #block-yui_3_17_2_1_1645282830210_29507,
+  #block-yui_3_17_2_1_1645282830210_30416{
+    box-sizing: border-box !important;
+    margin-left: 2vw !important;
+    margin-right: 2vw !important;
+  }
+}
+
+//Investment Summary Mobile
+@media @mobile{
+  #investment-summary{
+    display: none !important;
+  }
+}
+#investment-summary-mobile{
+  display: none !important;
+  @media @mobile{
+    p{
+      padding-left: 5vw !important;
+      padding-right: 5vw !important;
+    }
+    display: block !important;
+  }
+  .Index-page-content{
+    padding: 0 !important;
+  }
+}
+
+
+//Approach Page
+#approach-hero{
+  border-bottom: 1px solid @black !important;
+}
+
+#approach-summary{
+  position: relative !important;
+  background-color: @purple !important;
+  .sqs-col-4{
+    position: absolute !important;
+    min-height: 150vh !important;
+    overflow: hidden !important;
+    top: 0 !important;
+    right: 0 !important;
+    background-color: @lightblue !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    border-left: 1px solid @black !important;
+  }
+  #block-yui_3_17_2_1_1645290319486_4405,
+  #block-yui_3_17_2_1_1645287402186_6373,
+  #block-yui_3_17_2_1_1645290319486_5011,
+  #block-yui_3_17_2_1_1645290319486_6122,
+  #block-yui_3_17_2_1_1645290319486_6850,
+  #block-yui_3_17_2_1_1645290319486_8312{
+    display: none !important;
+  }
+}
+
+//Narrative Therapy
+#block-yui_3_17_2_1_1645290319486_4046::before{
+  content: 'A non-pathologizing, social justice-oriented approach. This includes how discrimination, oppression, inequality and other societal-level forces/systems contribute to mental health at the individual level. We will be supporting and working with you to question and deconstruct the narratives of the problems you have and move towards embracing and enriching the preferred stories of where you want to be.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1645290319486_4046:hover::before{
+  opacity: 1 !important;
+}
+
+//Narrative Image
+#block-yui_3_17_2_1_1645290319486_4046::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/621127d15dc11748e9d68d23/1645291476367/kermit-lost.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 50vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1645290319486_4046:hover::after{
+  opacity: 1 !important;
+}
+
+
+
+//Art Therapy
+#block-yui_3_17_2_1_1645290319486_5384::before{
+  content: 'Art Therapy is therapy beyond the arena of words. Art Therapy synthesizes verbal and non-verbal communication and when we begin opening to what creativity can bring into our self-discovery journey, our creations will start revealing personal significance that connect with our lived experiences.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1645290319486_5384:hover::before{
+  opacity: 1 !important;
+}
+
+//Art Image
+#block-yui_3_17_2_1_1645290319486_5384::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/621e94be2bfe171a388b9bde/1646171328095/bobross.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 50vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1645290319486_5384:hover::after{
+  opacity: 1 !important;
+}
+
+
+
+
+//EMDR Therapy
+#block-yui_3_17_2_1_1645290319486_5758::before{
+  content: 'EMDR therapy is a unique form of psychotherapy where bilateral stimulation (of eye movements or tapping movements) can help you process a disturbing incident - reducing the vividness and emotion associated with the traumatic incidents.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1645290319486_5758:hover::before{
+  opacity: 1 !important;
+}
+
+//EMDR Image
+#block-yui_3_17_2_1_1645290319486_5758::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/621e929ec3ab5b1ea235ef7b/1646170782398/eyemoving.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 40vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1645290319486_5758:hover::after{
+  opacity: 1 !important;
+}
+
+
+//EDIT Therapy
+#block-yui_3_17_2_1_1645290319486_6493::before{
+  content: 'EDIT is a person-centred approach that interweave in practical, compassion and mindfulness exercises, Health At Every Size, and work together to find ways to advocate and take up space while living in a time where diet culture and ‘wellness culture’ isn’t being called out on how it impacts us collectively.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1645290319486_6493:hover::before{
+  opacity: 1 !important;
+}
+
+//EDIT Image
+#block-yui_3_17_2_1_1645290319486_6493::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/621e8e68a774ee1a001bcb22/1646169706527/body-image.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 10vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1645290319486_6493:hover::after{
+  opacity: 1 !important;
+}
+
+
+
+//Brainspotting Therapy
+#block-yui_3_17_2_1_1645290319486_7227::before{
+  content: 'Where you look affects on how you feel. Brainspotting is a relational, highly attuned therapy where the BSP therapist helps locate, focus, process and release a wide range of emotionally and bodily-based conditions with the client.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1645290319486_7227:hover::before{
+  opacity: 1 !important;
+}
+
+//Brainspotting Image
+#block-yui_3_17_2_1_1645290319486_7227::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/62112687d71b423c9be01338/1645291144939/mr-rogers.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 0vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1645290319486_7227:hover::after{
+  opacity: 1 !important;
+}
+
+
+
+//Gottman Therapy
+#block-yui_3_17_2_1_1645290319486_7960::before{
+  content: 'A practical, emotion-focused, and highly effective approach based on 4 decades of research as an aid in couples therapy. This approach can help couples compassionately manage their conflicts, deepen their friendship and intimacy, and share their life purpose and dreams with practical interventions.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1645290319486_7960:hover::before{
+  opacity: 1 !important;
+}
+
+//Gottman Image
+#block-yui_3_17_2_1_1645290319486_7960::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/621e91a38c4f7b3f43412dc3/1646170532024/relationship.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 0vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1645290319486_7960:hover::after{
+  opacity: 1 !important;
+}
+
+
+
+//Play Therapy
+#block-yui_3_17_2_1_1645290319486_8685::before{
+  content: 'Play therapy is to children what counselling is to adults. Play therapy utilizes play, their natural medium of expression, to help children express their feelings more easily through creativity and toys instead of words.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1645290319486_8685:hover::before{
+  opacity: 1 !important;
+}
+
+//Play Therapy Image
+#block-yui_3_17_2_1_1645290319486_8685::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/621d6bc79aaec5799007fdd4/1646095307922/playtherapy.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 0vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1645290319486_8685:hover::after{
+  opacity: 1 !important;
+}
+
+// Somatic Experiencing
+#block-yui_3_17_2_1_1655687787748_23012::before{
+  content: 'Somatic experiencing is a body-centered approach to treating post-traumatic stress disorder (PTSD). Rather than focusing only on thoughts or emotions linked with a traumatic event, expand to include natural bodily responses.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
+
+#block-yui_3_17_2_1_1655687787748_23012:hover::before{
+  opacity: 1 !important;
+}
+
+// Somatic Experiencing Image
+#block-yui_3_17_2_1_1655687787748_23012::after{
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/62112687d71b423c9be01338/1645291144939/mr-rogers.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 0vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1655687787748_23012:hover::after{
+  opacity: 1 !important;
+}
+
+#approach-mobile{
+  display: none !important;
+  background-color: @purple !important;
+  .Index-page-content{
+    padding: 0 !important;
+  }
+  @media @mobile{
+    display: block !important;
+    p{
+      padding-left: 5vw !important;
+      padding-right: 5vw !important;
+    }
+  }
+  @media @tablet{
+    display: block !important;
+    padding-top: 5vh !important;
+  }
+}
+
+@media @mobile{
+  #approach-summary{
+    display: none !important;
+  }
+}
+
+@media @tablet{
+  #approach-summary{
+    display: none !important;
+  }
+}
+
+
+#approach-how-we-work{
+  border-top: 1px solid @black !important;
+}
+
+
+
+//Practitioner Profile Styling
+.collection-62129412dbe1134a708006cd{
+
+
+  .BlogItem-title,
+  .Blog-meta-item,
+  .BlogItem-share,
+  .BlogItem-pagination{
+    display: none !important;
+  }
+
+  .Main-content,
+  .Main--blog-item,
+  .BlogItem{
+    padding: 0 !important;
+  }
+
+  .BlogItem{
+    margin-top: -4vh !important;
+  }
+
+  .sqs-col-5{
+    @media @tablet{
+      padding-top: 25vh !important;
+      height: 80vh !important;
+    }
+    height: 100vh !important;
+    padding-top: 10vh !important;
+    padding-bottom: 10vh !Important;
+    background-color: @yellow !important;
+    border-bottom: 1px solid @black !important;
+    padding-left: 10vw !important;
+    padding-right: 5vw !important;
+    box-sizing: border-box !important;
+    .sqs-block-image{
+      padding: 0 !important;
+      width: 25vw !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      @media @mobile{
+        width: 80vw !important;
+    }   }
+    img{
+      border: 1px solid @black !important;
+    }
+    @media @mobile{
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+      padding-top: 15vh !important;
+      height: auto !important;
+      padding-right: 5vw !important;
+      padding-left: 5vw !important;
+    }
+  }
+
+  .sqs-col-7{
+    @media @tablet{
+      padding-top: 25vh !important;
+      h3{
+        font-size: 1.2rem !important;
+      }
+      h1{
+        font-size: 3.5rem !important;
+      }
+      height: 80vh !important;
+    }
+    height: 100vh !important;
+    padding-top: 10vh !important;
+    padding-bottom: 10vh !Important;
+    padding-left: 5vw !important;
+    padding-right: 2.5vw !important;
+    box-sizing: border-box !important;
+    background-color: @yellow !important;
+    border-bottom: 1px solid @black !important;
+    @media @mobile{
+      padding-right: 5vw !important;
+      padding-left: 5vw !important;
+      padding-top: 0 !important;
+      height: auto !important;
+    }
+  }
+
+  .sqs-col-9{
+    padding-top: 5vh !important;
+    padding-left: 5vw !important;
+    padding-right: 2.5vw !important;
+    box-sizing: border-box !important;
+    @media @mobile{
+      padding-right: 8vw !important;
+      padding-left: 8vw !important;
+    }
+  }
+
+  .sqs-col-3{
+    padding-top: 5vh !important;
+    padding-right: 5vw !important;
+
+    box-sizing: border-box !important;
+    @media @mobile{
+      padding-right: 8vw !important;
+      padding-left: 8vw !important;
+    }
+    @media @tablet{
+      p{
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+
+  .sqs-block-spacer{
+    display: none !important;
+  }
+}
+
+//Therapist Directory Styling
+#therapist-directory-summary{
+  background-color: @yellow !important;
+  .summary-item{
+    position: relative !important;
+    z-index: 1 !important;
+    padding-bottom: 5vh !important;
+    padding-top: 5vh !important;
+  }
+  .summary-title{
+    font-size: 6rem !important;
+    padding-bottom: 5vh !important;
+    padding-top: 5vh !important;
+  }
+  .summary-thumbnail-container{
+    @media @desktop{
+      position: absolute !important;
+      left: -25vw !important;
+      top: -5vh !important;
+      @media(min-width:1600px){
+        width: 80% !important;
+      }
+      overflow: visible !important;
+      z-index: 5 !important;
+      opacity: 0 !important;
+      transition: all 0.5s ease !important;
+    }
+    img{
+      border: 1px solid @black !important;
+    }
+  }
+
+  @media @desktop{
+    .summary-item:hover{
+      .summary-thumbnail-container{
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
+//Therapist Directory Mobile
+
+
+#therapist-directory-mobile{
+  display: none;
+  background-color: @yellow !important;
+  .summary-thumbnail-container{
+    img{
+      border: 1px solid @black !important;
+    }
+  }
+
+  .summary-item{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .summary-item:nth-child(odd){
+    padding-left: 20vw !important;
+    .summary-title{
+      font-size: 2.5rem !important;
+      margin-left: -20vw !important;
+    }
+
+  }
+  .summary-item:nth-child(even){
+    padding-right: 20vw !important;
+    .summary-title{
+      font-size: 2.5rem !important;
+    }
+  }
+}
+
+@media @mobile{
+  #therapist-directory-summary{
+    display: none !important;
+  }
+  #therapist-directory-mobile{
+    display: block !important;
+  }
+}
+
+@media @tablet{
+  #therapist-directory-summary{
+    display: none !important;
+  }
+  #therapist-directory-mobile{
+    display: block !important;
+  }
+}
+
+.custom-filter-container.custom-filter-view-dropdowns .sqs-block-archive .archive-block-wrapper{
+  background-color: @yellow !important;
+  overflow: auto !important;
+  font-family: 'Arbeit-Light' !important;
+  font-weight: 400 !important;
+  line-height: 1.3rem !important;
+}
+
+.archive-dropdown-toggle-label {
+  font-family: 'Arbeit-Regular' !important;
+  font-weight: 700 !important;
+}
+
+
+.custom-filter-container.custom-filter-view-dropdowns .sqs-block-archive .archive-group-name-link{
+  padding: 0 !important;
+  color: @black !important;
+  opacity: 1 !important;
+}
+
+.custom-filter-container.custom-filter-view-dropdowns .sqs-block-archive .archive-group-name-link.active{
+  text-decoration: underline !important;
+}
+
+.icn-down-open{
+  display: none !important;
+}
+
+.custom-filter-container.custom-filter-view-dropdowns .customFiltersWrapper .sqs-block .archive-group-list{
+  max-height: 800px !important;
+}
+
+@media @mobile{
+  .custom-filter-container .mobile-filter-trigger{
+    background-color: @yellow !important;
+    border: none !important;
+    font-family: 'Arbeit-Light' !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    font-size: 1.8rem !important;
+    padding: 0 !important;
+    border-bottom: 1px solid @black !important;
+    border-radius: 0 !Important;
+  }
+  .custom-filter-container .mobile-filter-trigger::after{
+    content: 'Directory';
+    padding-left: 2vw !important;
+  }
+  .custom-filter-container.use-mobile-panel.custom-filter-uid-0 .customFiltersWrapper .customFiltersContainer{
+    padding: 0 !important;
+  }
+  .custom-filter-container.custom-filter-view-dropdowns .sqs-block-archive .archive-block-wrapper{
+    background-color: @white !important;
+    overflow: auto !important;
+  }
+
+  .custom-filter-container.use-mobile-panel.custom-filter-uid-0 .customFiltersWrapper{
+    border: 1px solid @black !important;
+  }
+
+  .custom-filter-container .mobile-panel-close{
+    position: absolute !important;
+    top: 2vh !important;
+    left: 90% !important;
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
+  }
+}
+
+
+
+
+
+//Individual Blogpost styling
+.collection-5b7ddef9c2241bdea542c9e5{
+  .BlogItem{
+    .sqs-block-image{
+      padding: 0 !important;
+      border: 1px solid @black !important;
+      margin-left: 5vw !important;
+      margin-right: 5vw !important;
+      margin-top: 5vh !important;
+      margin-bottom: 5vh !important;
+    }
+    padding-top: 10vh !important;
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    padding-bottom: 10vh !important;
+  }
+  .BlogItem-title{
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    line-height: 1.1em !important;
+    text-align: left !important;
+  }
+
+  .Blog-meta-item{
+    color: @black !important;
+    letter-spacing: 0 !important;
+    font-family: 'Arbeit-Regular' !important;
+    font-size: 1.2rem !important;
+  }
+
+  .BlogItem-meta{
+    justify-content: left !important;
+  }
+
+  @media @desktop{
+    .item-pagination-link .item-pagination-title,
+    .item-pagination-link .item-pagination-icon,
+    .BlogItem-pagination-link .BlogItem-pagination-link-title,
+    .BlogItem-pagination-link .BlogItem-pagination-link-meta,
+    .pagination .prev-label,
+    .pagination .next-label {
+      display: none;
+    }
+    .item-pagination-link,
+    .BlogItem-pagination-link,
+    .pagination a[rel]> span {
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 60%;
+      width: auto;
+      transform: translateY(-60%);
+    }
+    .item-pagination-link.item-pagination-link--next,
+    .BlogItem-pagination-link.BlogItem-pagination-link--next,
+    .pagination .older a[rel]> span {
+      width: auto;
+
+      left: 0;
+    }
+    .item-pagination-link .item-pagination-prev-next,
+    .BlogItem-pagination-link .BlogItem-pagination-link-content,
+    .pagination a[rel]> span {
+      display: inline-block;
+      width: auto;
+      transform: rotate(-90deg);
+      transform-origin: center;
+      margin-left: -14.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+
+    }
+
+    .item-pagination-link.item-pagination-link--next,
+    .BlogItem-pagination-link.BlogItem-pagination-link--next,
+    .pagination .older a[rel] > span {
+
+      left: 22px;
+      margin-top:-150px;
+    }
+
+
+    .BlogItem-pagination-link .BlogItem-pagination-link-label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  footer{
+    position: relative !important;
+    z-index: 999999 !important;
+  }
+}
+
+.BlogItem-pagination{
+  .BlogItem-pagination-link-label{
+    font-family: 'Arbeit-Light' !important;
+    letter-spacing: 0 !important;
+    font-size: 1.2rem !important;
+    color: @black !important;
+  }
+}
+
+//Blog Summary Styling
+#blog-main-categories,
+#insight-categories,
+#resources-categories,
+#coping-categories,
+#create-categories{
+  @media @tablet{
+    padding-top: 6vh !important;
+  }
+  @media @mobile{
+    padding-top: 8vh !important;
+  }
+  border-bottom: 1px solid @black !important;
+
+  .Index-page-content{
+    padding: 0 !important;
+    padding-top: 2.5vh !important;
+    padding-bottom: 1.5vh !important;
+  }
+
+
+  #block-6213160ca82b686ed3b4a604,
+  #block-yui_3_17_2_1_1645417997641_5406,
+  #block-yui_3_17_2_1_1645417997641_5951,
+  #block-yui_3_17_2_1_1645417997641_6703,
+  #block-fbf8c1680088d67e6b8e,
+  #block-5f1fcbd68a7030d172c5,
+  #block-c76dc2fff21288800349,
+  #block-48c48e2c0b9cbf5db46d,
+  #block-95fc67c988c3b3dd6781,
+  #block-c1153a0736462d16e705,
+  #block-2de380dff8aaced56f5a,
+  #block-d2a982e3b6a665fd7cca,
+  #block-e48703ae273afb07f80e,
+  #block-f510915af1dd93210508,
+  #block-9a674b4d500a8b00abd6,
+  #block-0cf46b933066449f73fb{
+    h3::before{
+      content: '';
+      background-color: @white !important;
+      border: 1px solid @black !important;
+      border-radius: 50% !important;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 1vw !important;
+    }
+  }
+
+
+  #block-0fed3eb5fa9c37dc07f6,
+  #block-6a5484b5ad53b6a4b29f,
+  #block-15e0a047ab6cfc23745a,
+  #block-94a80c1bf71dda3e15ad{
+    h3::before{
+      content: '';
+      background-color: @black !important;
+      border: 1px solid @black !important;
+      border-radius: 50% !important;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 1vw !important;
+    }
+  }
+
+}
+
+
+#blog-summary,
+#insight-summary,
+#resources-summary,
+#coping-summary,
+#create-summary{
+  @media @mobile{
+    .sqs-block-summary-v2{
+      padding-top: 0 !important;
+    }
+  }
+  .sqs-block-summary-v2{
+    padding-bottom: 0 !important;
+  }
+  .Index-page-content{
+    padding: 0 !important;
+  }
+  .summary-item{
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+    @media(min-width: 1401px){
+      height: 70vh !important;
+    }
+    @media(max-width: 1400px){
+      height: 75vh !important;
+    }
+    @media(max-width: 1025px){
+      height: 110vh !important;
+    }
+    @media @tablet{
+      height: 50vh !important;
+    }
+    @media @mobile{
+      height: auto !important;
+    }
+    img{
+      transition: all 0.5s ease !important;
+    }
+  }
+
+  .summary-item:first-child{
+    background-color: @pink !important;
+  }
+
+
+  .summary-item:nth-child(2){
+    background-color: @blue !important;
+  }
+
+  .summary-item:nth-child(3){
+    background-color: @purple !important;
+  }
+
+  .summary-item:nth-child(2n+2){
+    background-color: @yellow !important;
+  }
+
+  .summary-item{
+    background-color: @purple;
+    transition: all 0.5s ease !important;
+  }
+
+  .summary-item:nth-child(4n+4){
+    background-color: @lightblue !important;
+  }
+
+  .summary-item:nth-child(3n+6){
+    background-color: @pink!important;
+  }
+
+
+  .summary-item:hover{
+    background-color: @white !important;
+    img{
+      transform: scale(1.1) !important;
+    }
+  }
+
+  .summary-title{
+    padding-left: 2.5vw !important;
+    padding-right: 2.5vw !important;
+    font-size: 1rem !important;
+  }
+
+
+
+  .summary-thumbnail-outer-container{
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    padding-top: 2.5vh !important;
+    padding-bottom: 2.5vh !important;
+  }
+}
+
+
+//Homepage
+#hero{
+  background: linear-gradient(-45deg, @pink, @lightblue, @purple, @yellow);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media @desktop{
+  #block-yui_3_17_2_1_1645423376545_1892{
+    width: 75% !important;
+    left: 15vw !important;
+  }
+}
+
+@media @tablet{
+  #hero{
+    height: 100vh !important;
+  }
+  #block-62132b0fbe81515915d422be,
+  #block-yui_3_17_2_1_1645423376545_1892{
+    padding-top: 15vh !important;
+  }
+
+  #block-yui_3_17_2_1_1645423376545_1892{
+    width: 100% !important;
+    left: 5vw !important;
+  }
+}
+
+@media @mobile{
+  #block-yui_3_17_2_1_1645423376545_1892{
+    left: 10vw !important;
+  }
+  #hero{
+    height: 100vh !important;
+    h1{
+      font-size: 5rem !important;
+    }
+  }
+}
+
+
+//Home second section
+
+#home-second{
+  transition: all 0.5s ease !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: 0 !important;
+  background-color: @lightblue !important;
+  @media(min-width:1200px){
+    top: 26h;
+    height: 90vh !important;
+  }
+  @media(min-width:1400px){
+    top: 25.5vh;
+    height: 90vh !important;
+  }
+  @media(min-width:1600px){
+    top: 24.5vh !important;
+    height: 90vh !important;
+  }
+  @media(min-width:1800px){
+    top: 24vh !important;
+    height: 90vh !important;
+  }
+  @media @tablet{
+    top: 0vh !important;
+    height: 100vh !important;
+  }
+
+  @media @mobile{
+    top: 0vh !important;
+    height: 100vh !important;
+  }
+
+
+  .Index-page-content{
+    h2{
+      font-size: 2rem !important;
+    }
+    position: relative !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    @media(min-width:1600px){
+      transform: translateY(-70%) !important;
+    }
+  }
+}
+
+#block-yui_3_17_2_1_1645423811967_4553{
+  width: 5% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.scrolled #home-second{
+  opacity: 1 !important;
+}
+
+
+//Home Third
+
+#home-third{
+  .Index-page-content{
+    padding: 0 !important;
+  }
+  .sqs-col-4{
+    box-sizing: border-box !important;
+    height: 40vh !important;
+    padding-left: 2.5vw !important;
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+    padding-right: 2.5vw !important;
+    border-top: 1px solid @black !important;
+    @media(min-width:1800px){
+      height: 30vh !important;
+    }
+    @media @tablet{
+      height: 60vh !important;
+    }
+    @media @mobile{
+      height: auto !important;
+    }
+  }
+
+  .sqs-col-4:first-child{
+    background-color: @yellow !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .sqs-col-4:first-child:hover{
+    background-image: url("https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/6213c8b71f7c2c6218b4e427/1645463746755/different-therapies-deciper-counselling.gif");
+    background-color: @white;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .sqs-col-4:nth-child(2){
+    border-left: 1px solid @black !important;
+    border-right: 1px solid @black !important;
+    background-color: @purple !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .sqs-col-4:nth-child(2):hover{
+    background-image: url("https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/6213c95d06d40d49bc11c674/1645463904018/bob-ross-decipher-creativity.gif");
+    background-color: @white;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .sqs-col-4:nth-child(3){
+    background-color: @lightblue !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .sqs-col-4:nth-child(3):hover{
+    background-image: url("https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/6213c9c3d5491270b19ea454/1645464004506/justice-oriented-decipher-counselling.gif");
+    background-color: @white;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .sqs-block-button{
+    padding-top: 0 !important;
+  }
+  .sqs-block-button-element--medium{
+    width: 100vw !important;
+    @media @mobile{
+      margin-left: -7vw !important;
+    }
+  }
+}
+
+//Home fourth section
+#home-fourth{
+  @media @mobile{
+    .Index-page-content{
+      padding-top: 5vh !important;
+    }
+  }
+  .sqs-block-button a{
+    margin-left: 2vw !important;
+    font-family: 'Arbeit-Regular' !important;
+    position: relative !important;
+    z-index: 1 !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    background-color: @black !important;
+    color: @white !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .sqs-block-button a:hover{
+    background-color: @green !important;
+    color: @black !important;
+  }
+}
+
+#block-yui_3_17_2_1_1645464223559_2115{
+  position: relative !important;
+}
+
+#block-yui_3_17_2_1_1645464768768_4239{
+  width: 15% !important;
+  position: absolute !important;
+  z-index: 999 !important;
+  top: 0vh !important;
+  left: 50vw !important;
+  animation: turn 10s linear infinite;
+  @media @mobile{
+    width: 50% !important;
+    left: -5vw !important;
+    top: 0vh !important;
+  }
+}
+
+@keyframes turn {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+//Home Fifth Section
+#home-fifth{
+  .Index-page-content{
+    padding: 0 !important;
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+  }
+  .sqs-block-button a{
+    margin-left: 2vw !important;
+    font-family: 'Arbeit-Regular' !important;
+    position: relative !important;
+    z-index: 1 !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    background-color: @black !important;
+    color: @white !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .sqs-block-button a:hover{
+    background-color: @green !important;
+    color: @black !important;
+  }
+  @media @mobile{
+    #block-62132cb12cadf05f6662b215{
+      padding-top: 10vh !important;
+    }
+    #block-yui_3_17_2_1_1645465531411_5048{
+      padding-bottom: 10vh !important;
+    }
+  }
+}
+
+
+//Home Sixth section
+#home-sixth{
+  .Index-page-content{
+    padding: 0 !important;
+    padding-top: 10vh !important;
+    padding-bottom: 25vh !important;
+    padding-right: 5vw !important;
+    @media @mobile{
+      padding-bottom: 10vh !important;
+      padding-top: 5vh !important;
+      padding-left: 5vw !important;
+    }
+  }
+  .sqs-block-button a{
+    margin-left: 2vw !important;
+    font-family: 'Arbeit-Regular' !important;
+    position: relative !important;
+    z-index: 1 !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    background-color: @black !important;
+    color: @white !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .sqs-block-button a:hover{
+    background-color: @green !important;
+    color: @black !important;
+  }
+
+  #block-yui_3_17_2_1_1645466132213_2186{
+    position: relative !important;
+    @media @mobile{
+      background-color: @yellow !important;
+      padding-top: 5vh !important;
+    }
+  }
+
+  #block-yui_3_17_2_1_1645467332375_4216{
+    @media @desktop{
+      position: absolute !important;
+      margin-left: -10vw !important;
+      margin-top: 10vh !important;
+      width: 45vw !important;
+      background-color: @yellow !important;
+      padding-left: 5vw !important;
+      padding-right: 5vw !important;
+      padding-top: 10vh !important;
+      padding-bottom: 10vh !important;
+    }
+    @media @mobile{
+      background-color: @yellow !important;
+      padding-left: 5vw !important;
+      padding-right: 5vw !important;
+      padding-top: 10vh !important;
+      padding-bottom: 10vh !important;
+    }
+  }
+
+  #block-yui_3_17_2_1_1645467332375_4780{
+    @media @mobile{
+      margin-top: -5vh !important;
+    }
+    @media @desktop{
+      position: absolute !important;
+      margin-top: 52.5vh !important;
+      margin-left: 5vw !important;
+      @media(min-width:1600px){
+        margin-top: 48.5vh !important;
+      }
+    }
+    @media(min-width:1900px){
+      margin-top:42vh !important;
+      margin-left: 7vw !important;
+    }
+
+
+    @media(min-width:1026px) and (max-width:1300px){
+      margin-top:62vh !important;
+      margin-left: 2.5vw !important;
+    }
+  }
+}
