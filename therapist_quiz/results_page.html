@@ -1,192 +1,208 @@
 <script>
-  const allTherapists = ["LL", "SN", "XW", "NR"];
+  const allTherapists = ["LL", "SN", "XW", "NR", "SG", "JC"];
 
-  const outcomeTitleWording = {
-    quizOne: {
-      a: 'adults',
-      b: 'children',
-      c: 'adolescents',
-      d: 'relationships/families'
-    },
-    quizTwo: {
-      a: 'currently taking on new clients',
-      b: 'available on weekends',
-      c: 'available on weekdays',
-      d: 'available evenings',
-    },
-    quizThree: {
-      a: 'the BIPoC community',
-      b: 'the QTBIPoC/marginalized community',
-      c: 'Food/Body Image issues',
-      d: 'EMDR/Brainspotting'
-    },
-    // NOTE: The way the phrase is constructed,
-    // the language question must always be the last,
-    // even if additional questions are added
-    quizFour: {
-      a: 'English',
-      b: 'Mandarin',
-      c: 'Cantonese'
-    }
-  };
+    const outcomeTitleWording = {
+        quizOne: {
+            a: 'adults',
+            b: 'children',
+            c: 'adolescents',
+            d: 'relationships/families'
+          },
+        quizTwo: {
+            a: 'currently taking on new clients',
+            b: 'available on weekends',
+            c: 'available on weekdays',
+            d: 'available evenings',
+          },
+        quizThree: {
+            a: 'BIPOC, LGBTQ+, and marginalized folks',
+            b: 'Food/Body Image issues',
+            c: 'EMDR/Brainspotting',
+            d: 'Lower Cost Counselling',
+          },
+        // NOTE: The way the phrase is constructed,
+        // the language question must always be the last,
+        // even if additional questions are added
+        quizFour: {
+            a: 'English',
+            b: 'Mandarin',
+            c: 'Cantonese',
+            d: 'Hindu, Urdu, or Punjabi',
+            e: 'Taglish',
+          }
+      };
 
-  const outcomeKey = {
-    // What counselling session type are you looking for?
-    quizOne: {
-      // Adults
-      a: ["LL", "SN", "XW", "NR"],
-      // Child
-      b: ["SN"],
-      // Adolescent
-      c: ["LL", "SN", "XW", "NR"],
-      // Relationship/Family
-      d: ["SN", "XW"]
-    },
-    // When are you free?
-    quizTwo: {
-      // Only taking on new clients
-      a: ["SN", "NR"],
-      // Weekends
-      b: ["SN", "XW"],
-      // Weekdays
-      c: ["LL", "SN", "XW", "NR"],
-      // Evenings
-      d: ["LL", "SN", "NR"],
-      // N/A
-      e: allTherapists
-    },
-    // Are you needing any specialized offerings our therapist team offers?
-    quizThree: {
-      // BIPOC
-      a: ["LL", "SN", "XW", "NR"],
-      // QTBIPoC community and marginalized folks
-      b: ["XW", "NR"],
-      // Food/Body Image
-      c: ["LL"],
-      // EMDR/Brainspotting
-      d: ["LL", "SN", "NR"],
-      // N/A
-      e: allTherapists
-    },
-    // Language
-    quizFour: {
-      // English
-      a: ["LL", "SN", "XW", "NR"],
-      // Mandarin
-      b: ["LL", "SN", "XW"],
-      // Cantonese
-      c: ["SN"]
-    }
-  };
+    const outcomeKey = {
+        // What counselling session type are you looking for?
+        quizOne: {
+            // Adults
+            a: allTherapists,
+            // Child
+            b: ["SN"],
+            // Adolescent
+            c: allTherapists,
+            // Relationship/Family
+            d: ["SN", "XW"]
+          },
+        // When are you free?
+        quizTwo: {
+            // Taking on new clients
+            a: ["SN", "NR", "JC", "SG"],
+            // Weekends
+            b: ["SN", "XW", "JC", "SG"],
+            // Weekdays
+            c: allTherapists,
+            // Evenings
+            d: ["LL", "SN", "NR"],
+            // N/A
+            e: allTherapists
+          },
+        // Are you needing any specialized offerings our therapist team offers?
+        quizThree: {
+            // BIPoC
+            a: allTherapists,
+            // Food/Body Image
+            b: ["LL"],
+            // EMDR/Brainspotting
+            c: ["LL", "SN", "NR"],
+            // Lower Cost
+            d: ["JC", "SG"],
+            // N/A
+            e: allTherapists
+          },
+        // Language
+        quizFour: {
+            // English
+            a: allTherapists,
+            // Mandarin
+            b: ["LL", "SN", "XW"],
+            // Cantonese
+            c: ["SN"],
+            // Indian
+            d: ["SG"],
+            // Taglish
+            e: ["JC"]
+          }
+      };
 
-  function modeString(array) {
-    if (array.length == 0) return null;
-    var modeMap = {};
-    var maxEl = array[0];
-    var maxCount = 1;
+    // Finds the common intersection between all lists given. This is
+    // used in the therapist quiz to find matching therapists that
+    // intersect between all choices the user made
+    function intersection() {
+        var result = [];
+        var lists;
 
-    for (var i = 0; i < array.length; i++) {
-      var el = array[i];
+        if(arguments.length === 1) {
+            lists = arguments[0];
+          } else {
+              lists = arguments;
+            }
 
-      if (modeMap[el] == null) modeMap[el] = 1;
-      else modeMap[el]++;
-
-      if (modeMap[el] > maxCount) {
-        maxEl = el;
-        maxCount = modeMap[el];
-      } else if (modeMap[el] == maxCount) {
-        maxEl += "&" + el;
-        maxCount = modeMap[el];
+        for(var i = 0; i < lists.length; i++) {
+            var currentList = lists[i];
+            for(var y = 0; y < currentList.length; y++) {
+                var currentValue = currentList[y];
+                if(result.indexOf(currentValue) === -1) {
+                    if(lists.filter(function(obj) { return obj.indexOf(currentValue) == -1 }).length == 0) {
+                        result.push(currentValue);
+                      }
+                  }
+              }
+          }
+        return result;
       }
-    }
-    return maxEl;
-  }
 
-  function makeEleVisible(ele, visible) {
-    if (visible) {
-      ele.classList.remove('decipher-quiz-result-hide');
-    } else {
-      ele.classList.add('decipher-quiz-result-hide');
-    }
-  }
+    function makeEleVisible(ele, visible) {
+        if (visible) {
+            ele.classList.remove('decipher-quiz-result-hide');
+          } else {
+              ele.classList.add('decipher-quiz-result-hide');
+            }
+      }
 
-  function wrapTitleWording(wording) {
-    return `<b class='decipher-quiz-result-title-variable'>${wording}</b>`;
-  }
+    function wrapTitleWording(wording) {
+        return `<b class='decipher-quiz-result-title-variable'>${wording}</b>`;
+      }
 
-  function injectOutcomeTitleWording(answers) {
-    // If a wording is undefined, it means that they chose a N/A answer
-    // and we can skip including that in the final phrase.
-    const wordingOne = outcomeTitleWording.quizOne[answers.quizOne];
-    const wordingTwo = outcomeTitleWording.quizTwo[answers.quizTwo];
-    const wordingThree = outcomeTitleWording.quizThree[answers.quizThree];
-    const wordingFour = outcomeTitleWording.quizFour[answers.quizFour];
-    let phrase = 'Here are the therapists that work well with ' +
-      `${wrapTitleWording(wordingOne)}`;
+    function injectOutcomeTitleWording(answers) {
+        // If a wording is undefined, it means that they chose a N/A answer
+        // and we can skip including that in the final phrase.
+        const wordingOne = outcomeTitleWording.quizOne[answers.quizOne];
+        const wordingTwo = outcomeTitleWording.quizTwo[answers.quizTwo];
+        const wordingThree = outcomeTitleWording.quizThree[answers.quizThree];
+        const wordingFour = outcomeTitleWording.quizFour[answers.quizFour];
+        let phrase = 'Here are the therapists that work well with ' +
+          `${wrapTitleWording(wordingOne)}`;
 
-    // i.e. "are [available on weekends/etc...]"
-    if (wordingTwo) {
-      phrase = phrase + `, are ${wrapTitleWording(wordingTwo)}`;
-    }
+        // i.e. "are [available on weekends/etc...]"
+        if (wordingTwo) {
+            phrase = phrase + `, are ${wrapTitleWording(wordingTwo)}`;
+          }
 
-    // i.e "specialize in [the BIPoC community/etc...]"
-    if (wordingThree) {
-      phrase = phrase + `, specialize in ${wrapTitleWording(wordingThree)}`;
-    }
+        // i.e "specialize in [the BIPoC community/etc...]"
+        if (wordingThree) {
+            phrase = phrase + `, specialize in ${wrapTitleWording(wordingThree)}`;
+          }
 
-    // i.e. "and consult in [English/etc...]"
-    phrase = phrase + ` and consult in ${wrapTitleWording(wordingFour)}`;
+        // i.e. "and consult in [English/etc...]"
+        phrase = phrase + ` and consult in ${wrapTitleWording(wordingFour)}`;
 
-    const ele = document.querySelector('.decipher-quiz-result-title-wording');
-    ele.innerHTML = phrase;
-  }
+        const ele = document.querySelector('.decipher-quiz-result-title-wording');
+        ele.innerHTML = phrase;
+      }
 
-  function processOutcome() {
-    const answers = {
-      quizOne: sessionStorage.getItem('quizOne'),
-      quizTwo: sessionStorage.getItem('quizTwo'),
-      quizThree: sessionStorage.getItem('quizThree'),
-      quizFour: sessionStorage.getItem('quizFour')
-    };
+    function processOutcome() {
+        const answers = {
+            quizOne: sessionStorage.getItem('quizOne'),
+            quizTwo: sessionStorage.getItem('quizTwo'),
+            quizThree: sessionStorage.getItem('quizThree'),
+            quizFour: sessionStorage.getItem('quizFour')
+          };
 
-    const tallyList = Object.keys(answers)
-      // For each quiz question param, append the therapists
-      // that matched the user's choice to a tally list
-      .reduce(function(accum, quizQuestion) {
-        const availChoices = Object.keys(outcomeKey[quizQuestion]);
-        const userChoice = answers[quizQuestion];
-        if (availChoices.includes(userChoice)) {
-          const outcome = outcomeKey[quizQuestion][userChoice];
-          return accum.concat(outcome);
-        }
+        const questionNames = Object.keys(answers);
 
-        return accum;
-      }, []);
-      const matches = modeString(tallyList).split("&");
+        // For each quiz question param, append the therapists
+        // that matched the user's choice to a tally list
+        // i.e. [["LL", "SX"], ["LL", "NR", "SG"], ...]
+        const tallyList = questionNames.reduce(function(accum, question) {
+            const possibleAnswers = Object.keys(outcomeKey[question]);
+            const userChoice = answers[question];
 
-      injectOutcomeTitleWording(answers);
+            if (possibleAnswers.includes(userChoice)) {
+                const outcome = outcomeKey[question][userChoice];
+                return accum.concat([outcome]);
+              }
 
-      makeEleVisible(document.querySelector('.decipher-quiz-result-spinner'), false);
-      makeEleVisible(document.querySelector('.decipher-quiz-result-title'), true);
-      makeEleVisible(document.querySelector('.decipher-quiz-result-profiles'), true);
+            return accum;
+          }, []);
 
-      matches.forEach(function(match) {
-        makeEleVisible(document.querySelector(`.decipher-quiz-result-profile-${match}`), true);
+        // Finds the intersection of therapists that match
+        // all conditions of the quiz
+        const matches = intersection(tallyList);
+
+        injectOutcomeTitleWording(answers);
+
+        makeEleVisible(document.querySelector('.decipher-quiz-result-spinner'), false);
+        makeEleVisible(document.querySelector('.decipher-quiz-result-title'), true);
+        makeEleVisible(document.querySelector('.decipher-quiz-result-profiles'), true);
+
+        matches.forEach(function(match) {
+            makeEleVisible(document.querySelector(`.decipher-quiz-result-profile-${match}`), true);
+          });
+
+      }
+
+    document.addEventListener('readystatechange', function(event) {
+        if (event.target.readyState === "complete") {
+            processOutcome();
+          }
       });
-
-  }
-
-  document.addEventListener('readystatechange', function(event) {
-    if (event.target.readyState === "complete") {
-      processOutcome();
-    }
-});
 </script>
 
 <style>
-  .decipher-quiz-result-hide {
-    display: none;
-  }
+.decipher-quiz-result-hide {
+  display: none;
+}
 
   .decipher-quiz-result-profiles {
     display: flex;
@@ -254,9 +270,21 @@
     </div>
     <div class="decipher-quiz-result-profile decipher-quiz-result-profile-NR decipher-quiz-result-hide">
       <a href="https://deciphercounselling.com/practitioners/natasha-roop">
-        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/1655442133021-0DAT74UZBA1NIZHVWE2U/Decipher-Edited-24.jpg" />
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/b482331d-eb1f-4061-b229-6d4453396d5e/natasha-pic" />
         <p>Natasha Roop</p>
       </a>
     </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-JC decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/jay-castro">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/67e5cf59-e25d-4c85-b352-512e1eb61798/profile-photo.jpg" />
+        <p>Jay Castro</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-SG decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/sun-gupta">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/ff1e0b86-2a9e-4092-923e-914e63df1e92/Sun.png" />
+        <p>Sun Gupta</p>
+      </a>
+    </div>
   </div>
-</div
+</div>

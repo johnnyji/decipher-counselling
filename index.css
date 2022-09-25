@@ -1578,7 +1578,7 @@ html .c-lightbox__close {
 
 // Somatic Experiencing
 #block-yui_3_17_2_1_1655687787748_23012::before{
-  content: 'Somatic experiencing is a body-centered approach to treating post-traumatic stress disorder (PTSD). Rather than focusing only on thoughts or emotions linked with a traumatic event, expand to include natural bodily responses.';
+  content: 'Somatic experiencing is a body-centered approach to treating post-traumatic stress disorder (PTSD). Rather than focusing only on thoughts or emotions linked with a traumatic event, it expands to include natural bodily responses.';
   background-color: @white;
   opacity: 0 !important;
   transition: all 0.5s ease !important;
