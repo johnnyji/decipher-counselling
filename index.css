@@ -1,4 +1,3 @@
-// Hide Overflow
 #collection-5e7d33d715eff3354c6e4fba,
 #collection-620bfa0d3a26e25e550ab122,
 #collection-620bf99b1b9153743e730a71,
@@ -40,7 +39,7 @@ footer{
     width: 30% !important;
     padding: 0px 0px;
     overflow:inherit;
-    box-sizing:border-box;
+    box-szing:border-box;
   }
 
 
@@ -1467,7 +1466,7 @@ html .c-lightbox__close {
   opacity: 0 !important;
   transition: all 0.5s ease !important;
   content:'';
-  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/62112687d71b423c9be01338/1645291144939/mr-rogers.gif');
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/62ce51961031a955d35e72c4/1657688471343/giphy.gif');
   background-size: contain;
   position: absolute;
   background-repeat: no-repeat;
@@ -1778,13 +1777,13 @@ html .c-lightbox__close {
   .summary-item{
     position: relative !important;
     z-index: 1 !important;
-    padding-bottom: 5vh !important;
-    padding-top: 5vh !important;
+    padding-bottom: 4vh !important;
+    padding-top: 4vh !important;
   }
   .summary-title{
-    font-size: 6rem !important;
-    padding-bottom: 5vh !important;
-    padding-top: 5vh !important;
+    font-size: 4rem !important;
+    padding-bottom: 4vh !important;
+    padding-top: 4vh !important;
   }
   .summary-thumbnail-container{
     @media @desktop{
@@ -2561,4 +2560,12 @@ html .c-lightbox__close {
       margin-left: 2.5vw !important;
     }
   }
+}
+
+
+//Investment Adjustments 2022 Sept
+#block-yui_3_17_2_1_1663958771856_33580,
+#block-yui_3_17_2_1_1663958771856_80816,
+#block-yui_3_17_2_1_1664322555552_62610{
+  display: none !important;
 }
