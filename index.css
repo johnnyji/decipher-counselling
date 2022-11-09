@@ -39,7 +39,7 @@ footer{
     width: 30% !important;
     padding: 0px 0px;
     overflow:inherit;
-    box-szing:border-box;
+    box-sizing:border-box;
   }
 
 
@@ -2387,6 +2387,7 @@ html .c-lightbox__close {
 
   .sqs-block-button{
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
   .sqs-block-button-element--medium{
     width: 100vw !important;
@@ -2398,6 +2399,7 @@ html .c-lightbox__close {
 
 //Home fourth section
 #home-fourth{
+  background-color: #E4EAA6 !important;
   @media @mobile{
     .Index-page-content{
       padding-top: 5vh !important;
@@ -2418,6 +2420,11 @@ html .c-lightbox__close {
   .sqs-block-button a:hover{
     background-color: @green !important;
     color: @black !important;
+  }
+
+  .sqs-block-image {
+    border: 1px solid @black !important;
+    padding: 0 !important;
   }
 }
 
