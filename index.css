@@ -2390,6 +2390,7 @@ html .c-lightbox__close {
 
   .sqs-block-button{
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
   .sqs-block-button-element--medium{
     width: 100vw !important;
@@ -2401,6 +2402,7 @@ html .c-lightbox__close {
 
 //Home fourth section
 #home-fourth{
+  background-color: #E4EAA6 !important;
   @media @mobile{
     .Index-page-content{
       padding-top: 5vh !important;
@@ -2422,6 +2424,10 @@ html .c-lightbox__close {
     background-color: @green !important;
     color: @black !important;
   }
+}
+
+#home-fourth img {
+  border: 1px solid @black !important;
 }
 
 #block-yui_3_17_2_1_1645464223559_2115{
