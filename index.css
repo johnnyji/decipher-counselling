@@ -39,7 +39,7 @@ footer{
     width: 30% !important;
     padding: 0px 0px;
     overflow:inherit;
-    box-szing:border-box;
+    box-sizing:border-box;
   }
 
 
@@ -1787,15 +1787,18 @@ html .c-lightbox__close {
   }
   .summary-thumbnail-container{
     @media @desktop{
-      position: absolute !important;
+      // NOTE: I have no idea why these 3 commented out values were previously here
+      // When we uncomment these, the image within will cut off its border and be
+      // confined to this component and not overflow as we expect
+      // position: absolute !important;
+      // overflow: visible !important;
+      // top: -5vh !important;
+      z-index: 5 !important;
+      opacity: 0 !important;
       left: -25vw !important;
-      top: -5vh !important;
       @media(min-width:1600px){
         width: 80% !important;
       }
-      overflow: visible !important;
-      z-index: 5 !important;
-      opacity: 0 !important;
       transition: all 0.5s ease !important;
     }
     img{
