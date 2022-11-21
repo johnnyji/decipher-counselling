@@ -1,36 +1,36 @@
 <script>
-  const allTherapists = ["LL", "SN", "XW", "NR", "SG", "JC"];
+  const allTherapists = ["LL", "SN", "XW", "NR", "SG", "JC", "MD"];
 
-    const outcomeTitleWording = {
-        quizOne: {
-            a: 'adults',
-            b: 'children',
-            c: 'adolescents',
-            d: 'relationships/families'
-          },
-        quizTwo: {
-            a: 'currently taking on new clients',
-            b: 'available on weekends',
-            c: 'available on weekdays',
-            d: 'available evenings',
-          },
-        quizThree: {
-            a: 'BIPOC, LGBTQ+, and marginalized folks',
-            b: 'Food/Body Image issues',
-            c: 'EMDR/Brainspotting',
-            d: 'Lower Cost Counselling',
-          },
-        // NOTE: The way the phrase is constructed,
-        // the language question must always be the last,
-        // even if additional questions are added
-        quizFour: {
-            a: 'English',
-            b: 'Mandarin',
-            c: 'Cantonese',
-            d: 'Hindu, Urdu, or Punjabi',
-            e: 'Taglish',
-          }
-      };
+  const outcomeTitleWording = {
+      quizOne: {
+          a: 'adults',
+          b: 'children',
+          c: 'adolescents',
+          d: 'relationships/families'
+        },
+      quizTwo: {
+          a: 'currently taking on new clients',
+          b: 'available on weekends',
+          c: 'available on weekdays',
+          d: 'available evenings',
+        },
+      quizThree: {
+          a: 'BIPOC, LGBTQ+, and marginalized folks',
+          b: 'Food/Body Image issues',
+          c: 'EMDR/Brainspotting',
+          d: 'Lower Cost Counselling',
+        },
+      // NOTE: The way the phrase is constructed,
+      // the language question must always be the last,
+      // even if additional questions are added
+      quizFour: {
+          a: 'English',
+          b: 'Mandarin',
+          c: 'Cantonese',
+          d: 'Hindu, Urdu, or Punjabi',
+          e: 'Taglish',
+        }
+    };
 
     const outcomeKey = {
         // What counselling session type are you looking for?
@@ -47,13 +47,13 @@
         // When are you free?
         quizTwo: {
             // Taking on new clients
-            a: ["SN", "NR", "JC", "SG"],
+            a: ["SN", "NR", "JC", "SG", "MD"],
             // Weekends
-            b: ["SN", "XW", "JC", "SG"],
+            b: ["SN", "XW", "JC", "SG", "MD"],
             // Weekdays
             c: allTherapists,
             // Evenings
-            d: ["LL", "SN", "NR"],
+            d: ["LL", "SN", "NR", "MD"],
             // N/A
             e: allTherapists
           },
@@ -62,7 +62,7 @@
             // BIPoC
             a: allTherapists,
             // Food/Body Image
-            b: ["LL"],
+            b: ["LL", "MD"],
             // EMDR/Brainspotting
             c: ["LL", "SN", "NR"],
             // Lower Cost
@@ -250,6 +250,18 @@
     <p>To see all therapists, <a class="decipher-quiz-result-therapist-directory-link" href="https://deciphercounselling.com/therapist-directory">visit our therapist directory</a></p>
   </div>
   <div class="decipher-quiz-result-profiles decipher-quiz-result-hide">
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-MD decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/maryamdada">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/5c8e87dd-2438-4f9c-ba99-95c5fbd7e64a/DECIPHER_EDITED_7+copy.png?format=750w" />
+        <p>Maryam Dada</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-NR decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/natasha-roop">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/2fbfd1a5-ae7c-4b7d-bb8d-ce43ae74efe6/DECIPHER_EDITED_4+copy.png?format=750w" />
+        <p>Natasha Roop</p>
+      </a>
+    </div>
     <div class="decipher-quiz-result-profile decipher-quiz-result-profile-LL decipher-quiz-result-hide">
       <a href="https://deciphercounselling.com/practitioners/linda-lin">
         <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/26d1040c-7f8b-4ee3-a2d0-98a38d8eeab7/Decipher-Edited-6.jpg" />
@@ -264,14 +276,8 @@
     </div>
     <div class="decipher-quiz-result-profile decipher-quiz-result-profile-XW decipher-quiz-result-hide">
       <a href="https://deciphercounselling.com/practitioners/xu-wang">
-        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/969497ec-2a8e-40d4-a573-c2486cb112e5/Professional+Photo1.jpg" />
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/53cdf53b-5ee9-4ea0-b0ad-dc8f469c6954/DECIPHER_EDITED_5+copy.png?format=750w" />
         <p>Xu Wang</p>
-      </a>
-    </div>
-    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-NR decipher-quiz-result-hide">
-      <a href="https://deciphercounselling.com/practitioners/natasha-roop">
-        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/b482331d-eb1f-4061-b229-6d4453396d5e/natasha-pic" />
-        <p>Natasha Roop</p>
       </a>
     </div>
     <div class="decipher-quiz-result-profile decipher-quiz-result-profile-JC decipher-quiz-result-hide">
