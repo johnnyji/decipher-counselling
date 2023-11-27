@@ -1,41 +1,41 @@
 <script>
   const questionNums = {
-      quizOne: 1,
-      quizTwo: 2,
-      quizThree: 3,
-      quizFour: 4,
-    };
+    quizOne: 1,
+    quizTwo: 2,
+    quizThree: 3,
+    quizFour: 4,
+  };
 
-    function animateScroll(ele, frame, amount){
-        const step = 20;
-        if (frame < amount) {
-            const newFrame = frame + step;
-            ele.style.left = `-${newFrame}px`;
-            window.requestAnimationFrame(function(){
-                animateScroll(ele, newFrame, amount);
-              });
-          } else {
-              ele.style.left = `-${amount}px`;
-            }
-      }
+  function animateScroll(ele, frame, amount){
+    const step = 20;
+    if (frame < amount) {
+      const newFrame = frame + step;
+      ele.style.left = `-${newFrame}px`;
+      window.requestAnimationFrame(function(){
+        animateScroll(ele, newFrame, amount);
+      });
+    } else {
+      ele.style.left = `-${amount}px`;
+    }
+  }
 
-    function scrollToQuestion(questionNum) {
-        const ele = document.querySelector('.decipher-quiz-container');
-        const questionWidth = document.querySelector('.decipher-quiz-question').offsetWidth;
-        const newLeft = questionWidth * questionNum;
-        const currentLeft = newLeft - questionWidth;
-        ele.style.position = 'relative';
-        animateScroll(ele, currentLeft, newLeft);
-      }
+  function scrollToQuestion(questionNum) {
+    const ele = document.querySelector('.decipher-quiz-container');
+    const questionWidth = document.querySelector('.decipher-quiz-question').offsetWidth;
+    const newLeft = questionWidth * questionNum;
+    const currentLeft = newLeft - questionWidth;
+    ele.style.position = 'relative';
+    animateScroll(ele, currentLeft, newLeft);
+  }
 
-    function quizAnswer(question, answer) {
-        sessionStorage.setItem(question, answer);
-        if (question == 'quizFour') {
-            window.location.href = 'https://deciphercounselling.com/therapist-finder-results';
-          } else {
-              scrollToQuestion(questionNums[question]);
-            }
-      }
+  function quizAnswer(question, answer) {
+    sessionStorage.setItem(question, answer);
+    if (question == 'quizFour') {
+      window.location.href = 'https://deciphercounselling.com/therapist-finder-results';
+    } else {
+      scrollToQuestion(questionNums[question]);
+    }
+  }
 </script>
 
 <style>
@@ -91,7 +91,8 @@
       <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'a');">BIPOC, LGBTQ+, and marginalized folks</button>
       <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'b');">Food/Body Image issues</button>
       <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'c');">EMDR/Brainspotting</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'd');">None of the above</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'd');">Low Cost Counselling</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'e');">None of the above</button>
     </div>
   </div>
   <div class="decipher-quiz-question">
@@ -101,7 +102,6 @@
       <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'b');">Mandarin</button>
       <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'c');">Cantonese</button>
       <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'd');">Hindu, Urdu, or Punjabi</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'e');">Taglish</button>
     </div>
   </div>
 </div>
