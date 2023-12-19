@@ -1771,7 +1771,7 @@ html .c-lightbox__close {
   }
 }
 
-//Therapist Directory Styling
+/* Therapist Directory Styling */
 #therapist-directory-summary{
   background-color: @yellow !important;
   .summary-item{
@@ -1786,7 +1786,7 @@ html .c-lightbox__close {
     padding-top: 4vh !important;
   }
   .summary-thumbnail-container{
-    @media @desktop{
+    @media @desktop {
       // NOTE: I have no idea why these 3 commented out values were previously here
       // When we uncomment these, the image within will cut off its border and be
       // confined to this component and not overflow as we expect
@@ -1801,7 +1801,8 @@ html .c-lightbox__close {
       }
       transition: all 0.5s ease !important;
     }
-    img{
+
+    img {
       border: 1px solid @black !important;
     }
   }
@@ -1815,14 +1816,14 @@ html .c-lightbox__close {
   }
 }
 
-//Therapist Directory Mobile
-
-
+/* Therapist Directory Mobile */
 #therapist-directory-mobile{
   display: none;
   background-color: @yellow !important;
   .summary-thumbnail-container{
-    img{
+    img {
+      /* height: auto prevents the image from stretching out on mobile */
+      height: auto;
       border: 1px solid @black !important;
     }
   }
