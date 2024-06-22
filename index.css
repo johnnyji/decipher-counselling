@@ -1239,6 +1239,7 @@ html .c-lightbox__close {
     min-height: 150vh !important;
     overflow: hidden !important;
     top: 0 !important;
+    bottom: 0 !important;
     right: 0 !important;
     background-color: @lightblue !important;
     box-sizing: border-box !important;
@@ -1437,11 +1438,53 @@ html .c-lightbox__close {
   opacity: 1 !important;
 }
 
+//Anti-Oppressive Therapy
+#block-yui_3_17_2_1_1719088788009_6663::before {
+  content: 'We practice cultural humility and awareness to reflect on power, oppression, and identity when working with individuals. No one is free until we are all free.';
+  background-color: @white;
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  border: 1px solid @black !important;
+  padding-top: 2.5vh !important;
+  padding-bottom: 2.5vh !important;
+  padding-left: 2vw !important;
+  padding-right: 2vw !important;
+  width: 25vw !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:3;
+}
 
+#block-yui_3_17_2_1_1719088788009_6663:hover::before {
+  opacity: 1 !important;
+}
 
-//Brainspotting Therapy
+//Anti-Oppressive Image
+#block-yui_3_17_2_1_1719088788009_6663::after {
+  opacity: 0 !important;
+  transition: all 0.5s ease !important;
+  content:'';
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/667734a12ff070306a738367/1719088328212/antioppressive.gif');
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 25vw;
+  height: 50vh;
+  top: 0vh;
+  transform: translateY(-50%) !important;
+  right: -30vw;
+  z-index: 5 !important;
+}
+
+#block-yui_3_17_2_1_1719088788009_6663:hover::after {
+  opacity: 1 !important;
+}
+
+//Intersectional Trauma-Informed Therapy
 #block-yui_3_17_2_1_1645290319486_7227::before{
-  content: 'Where you look affects on how you feel. Brainspotting is a relational, highly attuned therapy where the BSP therapist helps locate, focus, process and release a wide range of emotionally and bodily-based conditions with the client.';
+  content: 'Healing is about reconnection to our identity and community. We recognize that our experiences of trauma are socialized, that they are shaped by our unique identities and the social contexts. We strive to work with values aligned with racial and gender justice, disability justice, fat liberation and solidarity.';
   background-color: @white;
   opacity: 0 !important;
   transition: all 0.5s ease !important;
@@ -1461,12 +1504,12 @@ html .c-lightbox__close {
   opacity: 1 !important;
 }
 
-//Brainspotting Image
+//Intersectional Trauma-Informed Image
 #block-yui_3_17_2_1_1645290319486_7227::after{
   opacity: 0 !important;
   transition: all 0.5s ease !important;
   content:'';
-  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/62ce51961031a955d35e72c4/1657688471343/giphy.gif');
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/6677308603a4f15ba26d94e4/1719087251371/intersectionaltraumainformed.gif');
   background-size: contain;
   position: absolute;
   background-repeat: no-repeat;
@@ -1482,8 +1525,6 @@ html .c-lightbox__close {
 #block-yui_3_17_2_1_1645290319486_7227:hover::after{
   opacity: 1 !important;
 }
-
-
 
 //Gottman Therapy
 #block-yui_3_17_2_1_1645290319486_7960::before{
@@ -1529,11 +1570,9 @@ html .c-lightbox__close {
   opacity: 1 !important;
 }
 
-
-
-//Play Therapy
+// Intergenerational Healing
 #block-yui_3_17_2_1_1645290319486_8685::before{
-  content: 'Play therapy is to children what counselling is to adults. Play therapy utilizes play, their natural medium of expression, to help children express their feelings more easily through creativity and toys instead of words.';
+  content: 'It didn’t start with you. We recognize that our wellbeing doesn’t just stem from personal context. Wounds can come from historical, cultural, and persistent trauma. We help folks access ancestral wisdom to process and heal from intergenerational wounds.';
   background-color: @white;
   opacity: 0 !important;
   transition: all 0.5s ease !important;
@@ -1553,12 +1592,12 @@ html .c-lightbox__close {
   opacity: 1 !important;
 }
 
-//Play Therapy Image
+//Intergenerational Healing Image
 #block-yui_3_17_2_1_1645290319486_8685::after{
   opacity: 0 !important;
   transition: all 0.5s ease !important;
   content:'';
-  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/621d6bc79aaec5799007fdd4/1646095307922/playtherapy.gif');
+  background-image:url('https://static1.squarespace.com/static/5ae7f1bb266c07f90cfec5be/t/667732a5986ff8286ba6959d/1719087789515/intergenerational+healing.gif');
   background-size: contain;
   position: absolute;
   background-repeat: no-repeat;
@@ -1576,8 +1615,8 @@ html .c-lightbox__close {
 }
 
 // Somatic Experiencing
-#block-yui_3_17_2_1_1655687787748_23012::before{
-  content: 'Somatic experiencing is a body-centered approach to treating post-traumatic stress disorder (PTSD). Rather than focusing only on thoughts or emotions linked with a traumatic event, it expands to include natural bodily responses.';
+#block-yui_3_17_2_1_1719090590035_17907::before{
+  content: 'Somatic experiencing is a body-centered approach to treating post-traumatic stress disorder (PTSD). Rather than focusing only on thoughts or emotions somatic experiencing support us to come back into our bodies: incorporating movement, mindfulness, breath work, felt sense and embodied inquiry.';
   background-color: @white;
   opacity: 0 !important;
   transition: all 0.5s ease !important;
@@ -1593,12 +1632,12 @@ html .c-lightbox__close {
   z-index:3;
 }
 
-#block-yui_3_17_2_1_1655687787748_23012:hover::before{
+#block-yui_3_17_2_1_1719090590035_17907:hover::before{
   opacity: 1 !important;
 }
 
 // Somatic Experiencing Image
-#block-yui_3_17_2_1_1655687787748_23012::after{
+#block-yui_3_17_2_1_1719090590035_17907::after{
   opacity: 0 !important;
   transition: all 0.5s ease !important;
   content:'';
@@ -1615,7 +1654,7 @@ html .c-lightbox__close {
   z-index: 5 !important;
 }
 
-#block-yui_3_17_2_1_1655687787748_23012:hover::after{
+#block-yui_3_17_2_1_1719090590035_17907:hover::after{
   opacity: 1 !important;
 }
 
