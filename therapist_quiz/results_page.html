@@ -1,4 +1,5 @@
-<script> const allTherapists = ["LL", "NR", "SG", "MD", "CH"];
+<script>
+  const allTherapists = ["LL", "NR", "SG", "MD", "CH", "MM", "CL"];
 
   const outcomeTitleWording = {
     quizOne: {
@@ -16,7 +17,7 @@
     quizThree: {
       a: 'BIPOC, LGBTQ+, and marginalized folks',
       b: 'Food/Body Image issues',
-      c: 'EMDR/Brainspotting',
+      c: 'EMDR',
       d: 'Low Cost Counselling'
     },
     // NOTE: The way the phrase is constructed,
@@ -36,22 +37,22 @@
       // Adults
       a: allTherapists,
       // Child
-      b: [],
+      b: ["MM", "CL"],
       // Adolescent
       c: allTherapists,
       // Relationship/Family
-      d: []
+      d: ["CL", "LL"]
     },
     // When are you free?
     quizTwo: {
       // Taking on new clients
-      a: ["SG", "MD", "CH"],
+      a: ["SG", "MD", "CH", "CL", "MM"],
       // Weekends
-      b: ["SG", "MD"],
+      b: ["SG", "MD", "CL"],
       // Weekdays
       c: allTherapists,
       // Evenings
-      d: ["LL", "NR", "MD", "SG"],
+      d: ["LL", "NR", "MD", "SG", "MM", "CL"],
       // N/A
       e: allTherapists
     },
@@ -60,11 +61,11 @@
       // BIPoC
       a: allTherapists,
       // Food/Body Image
-      b: ["LL", "MD"],
-      // EMDR/Brainspotting
+      b: ["LL", "MD", "MM"],
+      // EMDR
       c: ["LL", "NR", "MD"],
       // Low Cost
-      d: ["CH"],
+      d: ["CH", "MM"],
       // N/A
       e: allTherapists
     },
@@ -75,7 +76,7 @@
       // Mandarin
       b: ["LL", "CH"],
       // Cantonese
-      c: [],
+      c: ["CL"],
       // Indian
       d: ["SG"]
     }
@@ -273,6 +274,18 @@
     <div class="decipher-quiz-result-profile decipher-quiz-result-profile-SG decipher-quiz-result-hide">
       <a href="https://deciphercounselling.com/practitioners/sun-gupta">
         <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/1701977696847-JBY9YW5WUXE4BOE1Z32N/Sun-Edited-3.jpg?format=2500w" />
+        <p>Sun Gupta</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-MM decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/maddison-miller">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/ff98bd06-4722-45ce-abe1-0aa136e06b17/Screen+Shot+2024-07-17+at+4.39.19+PM.png" />
+        <p>Maddison Miller</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-CL decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/caprial-leung">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/a22a453c-8d3d-4eb0-a68d-dad050e2f55c/IMG_1829+-+Caprial+Leung.JPG" />
         <p>Sun Gupta</p>
       </a>
     </div>
