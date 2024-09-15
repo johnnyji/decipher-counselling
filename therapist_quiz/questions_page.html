@@ -4,6 +4,7 @@
     quizTwo: 2,
     quizThree: 3,
     quizFour: 4,
+    quizFive: 5,
   };
 
   function animateScroll(ele, frame, amount){
@@ -30,7 +31,7 @@
 
   function quizAnswer(question, answer) {
     sessionStorage.setItem(question, answer);
-    if (question == 'quizFour') {
+    if (question == 'quizFive') {
       window.location.href = 'https://deciphercounselling.com/therapist-finder-results';
     } else {
       scrollToQuestion(questionNums[question]);
@@ -86,22 +87,30 @@
     </div>
   </div>
   <div class="decipher-quiz-question">
-    <h2>Are you needing any specialized offerings our therapist team offers?</h2>
+    <h2>Do you have extended health benefits (insurance coverage for counselling)?</h2>
     <div>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'a');">BIPOC, LGBTQ+, and marginalized folks</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'b');">Food/Body Image issues</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'c');">EMDR</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'd');">Low Cost Counselling</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'e');">None of the above</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'a');">Yes</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'b');">No</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizThree', 'c');">I'm not sure</button>
+    </div>
+  </div>
+  <div class="decipher-quiz-question">
+    <h2>Are you needing any specialized offering from our team?</h2>
+    <div>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'a');">BIPOC, LGBTQ+, and marginalized folks</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'b');">Food/Body Image issues</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'c');">EMDR</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'd');">Low Cost/Sliding Scale counselling</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'e');">None of the above</button>
     </div>
   </div>
   <div class="decipher-quiz-question">
     <h2>What language would you like the counselling session to be in?</h2>
     <div>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'a');">English</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'b');">Mandarin</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'c');">Cantonese</button>
-      <button class="decipher-quiz-button" onclick="quizAnswer('quizFour', 'd');">Hindu, Urdu, or Punjabi</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFive', 'a');">English</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFive', 'b');">Mandarin</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFive', 'c');">Cantonese</button>
+      <button class="decipher-quiz-button" onclick="quizAnswer('quizFive', 'd');">Hindu, Urdu, or Punjabi</button>
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <script>
-  const allTherapists = ["LL", "NR", "SG", "MD", "CH", "MM", "CL"];
+  const allTherapists = ["LL", "NR", "SG", "MD", "CH", "MM", "CL", "CK"];
 
   const outcomeTitleWording = {
     quizOne: {
@@ -15,15 +15,21 @@
       d: 'available evenings',
     },
     quizThree: {
+      a: 'Yes',
+      b: 'No',
+      c: 'I\'m not sure',
+    },
+    quizFour: {
       a: 'BIPOC, LGBTQ+, and marginalized folks',
       b: 'Food/Body Image issues',
       c: 'EMDR',
-      d: 'Low Cost Counselling'
+      d: 'Low Cost/Sliding Scale counselling',
+      e: 'None of the above'
     },
     // NOTE: The way the phrase is constructed,
     // the language question must always be the last,
     // even if additional questions are added
-    quizFour: {
+    quizFive: {
       a: 'English',
       b: 'Mandarin',
       c: 'Cantonese',
@@ -46,35 +52,44 @@
     // When are you free?
     quizTwo: {
       // Taking on new clients
-      a: ["SG", "MD", "CH", "CL", "MM"],
+      a: ["SG", "MD", "CH", "CL", "MM", "CK", "LL"],
       // Weekends
-      b: ["SG", "MD", "CL"],
+      b: ["SG", "MD", "CL", "CK"],
       // Weekdays
       c: allTherapists,
       // Evenings
-      d: ["LL", "NR", "MD", "SG", "MM", "CL"],
+      d: ["LL", "NR", "MD", "SG", "MM", "CL", "CK"],
       // N/A
       e: allTherapists
     },
-    // Are you needing any specialized offerings our therapist team offers?
+    // Do you have extended health benefits (insurance coverage for counselling)?
     quizThree: {
+      // Yes
+      a: ['MM', 'CL', 'MD', 'SG', 'NR', 'LL'],
+      // No
+      b: allTherapists,
+      // I'm not sure
+      c: allTherapists,
+    },
+    // Are you needing any specialized offering from our team?
+    quizFour: {
       // BIPoC
       a: allTherapists,
       // Food/Body Image
       b: ["LL", "MD", "MM"],
       // EMDR
       c: ["LL", "NR", "MD"],
-      // Low Cost
-      d: ["CH", "MM"],
+      // Low Cost/Sliding Scale
+      d: ["CH", "MM", "CK"],
       // N/A
       e: allTherapists
     },
-    // Language
-    quizFour: {
+   // Language
+    quizFive: {
       // English
       a: allTherapists,
       // Mandarin
-      b: ["LL", "CH"],
+      b: ["LL", "CH", "CK"],
       // Cantonese
       c: ["CL"],
       // Indian
@@ -126,8 +141,8 @@
     // and we can skip including that in the final phrase.
     const wordingOne = outcomeTitleWording.quizOne[answers.quizOne];
     const wordingTwo = outcomeTitleWording.quizTwo[answers.quizTwo];
-    const wordingThree = outcomeTitleWording.quizThree[answers.quizThree];
     const wordingFour = outcomeTitleWording.quizFour[answers.quizFour];
+    const wordingFive = outcomeTitleWording.quizFive[answers.quizFive];
     let phrase = 'Here are the therapists that work well with ' +
       `${wrapTitleWording(wordingOne)}`;
 
@@ -135,14 +150,16 @@
     if (wordingTwo) {
       phrase = phrase + `, are ${wrapTitleWording(wordingTwo)}`;
     }
+    
+    // NOTE: We purposely don't include quizThree in the outcome title
 
     // i.e "specialize in [the BIPoC community/etc...]"
-    if (wordingThree) {
-      phrase = phrase + `, specialize in ${wrapTitleWording(wordingThree)}`;
+    if (wordingFour) {
+      phrase = phrase + `, specialize in ${wrapTitleWording(wordingFour)}`;
     }
 
     // i.e. "and consult in [English/etc...]"
-    phrase = phrase + ` and consult in ${wrapTitleWording(wordingFour)}`;
+    phrase = phrase + ` and consult in ${wrapTitleWording(wordingFive)}`;
 
     const ele = document.querySelector('.decipher-quiz-result-title-wording');
     ele.innerHTML = phrase;
@@ -153,7 +170,8 @@
       quizOne: sessionStorage.getItem('quizOne'),
       quizTwo: sessionStorage.getItem('quizTwo'),
       quizThree: sessionStorage.getItem('quizThree'),
-      quizFour: sessionStorage.getItem('quizFour')
+      quizFour: sessionStorage.getItem('quizFour'),
+      quizFive: sessionStorage.getItem('quizFive')
     };
 
     const questionNames = Object.keys(answers);
@@ -286,7 +304,13 @@
     <div class="decipher-quiz-result-profile decipher-quiz-result-profile-CL decipher-quiz-result-hide">
       <a href="https://deciphercounselling.com/practitioners/caprial-leung">
         <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/a22a453c-8d3d-4eb0-a68d-dad050e2f55c/IMG_1829+-+Caprial+Leung.JPG" />
-        <p>Sun Gupta</p>
+        <p>Caprial Leung</p>
+      </a>
+    </div>
+    <div class="decipher-quiz-result-profile decipher-quiz-result-profile-CK decipher-quiz-result-hide">
+      <a href="https://deciphercounselling.com/practitioners/chloe-kwok">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae7f1bb266c07f90cfec5be/6dfe75f9-2d7a-4c55-ae46-3e287d7fcac4/Headshot+-+Chloe+Kwok.jpg" />
+        <p>Chloe Kwok</p>
       </a>
     </div>
   </div>
